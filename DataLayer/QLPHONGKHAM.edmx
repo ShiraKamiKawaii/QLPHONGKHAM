@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="qlPhongKhamDongYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BenhNhan">
+          <Key>
+            <PropertyRef Name="maBN" />
+          </Key>
+          <Property Name="maBN" Type="nchar" MaxLength="14" Nullable="false" />
+          <Property Name="hoTenBN" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ngaySinh" Type="date" Nullable="false" />
+          <Property Name="gioiTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="diaChi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="dienThoai" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="CCCD" Type="nchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PhieuKham">
+          <Key>
+            <PropertyRef Name="maPK" />
+          </Key>
+          <Property Name="maPK" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="maBN" Type="nchar" MaxLength="14" Nullable="false" />
+          <Property Name="hoTenBN" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ngaySinh" Type="date" Nullable="false" />
+          <Property Name="gioiTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="diaChi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="dienThoai" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="CCCD" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="chuanDoan" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="noiDung" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="matKhau" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="hoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="role" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PhieuKham_BenhNhan">
+          <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="1" />
+          <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BenhNhan">
+              <PropertyRef Name="maBN" />
+            </Principal>
+            <Dependent Role="PhieuKham">
+              <PropertyRef Name="maBN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="qlPhongKhamDongYModelStoreContainer">
+          <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhieuKham" EntityType="Self.PhieuKham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_PhieuKham_BenhNhan" Association="Self.FK_PhieuKham_BenhNhan">
+            <End Role="BenhNhan" EntitySet="BenhNhan" />
+            <End Role="PhieuKham" EntitySet="PhieuKham" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="qlPhongKhamDongYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BenhNhan">
+          <Key>
+            <PropertyRef Name="maBN" />
+          </Key>
+          <Property Name="maBN" Type="String" MaxLength="14" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="hoTenBN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="gioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="diaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PhieuKhams" Relationship="Self.FK_PhieuKham_BenhNhan" FromRole="BenhNhan" ToRole="PhieuKham" />
+        </EntityType>
+        <EntityType Name="PhieuKham">
+          <Key>
+            <PropertyRef Name="maPK" />
+          </Key>
+          <Property Name="maPK" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="maBN" Type="String" MaxLength="14" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="hoTenBN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="gioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="diaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="chuanDoan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="noiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BenhNhan" Relationship="Self.FK_PhieuKham_BenhNhan" FromRole="PhieuKham" ToRole="BenhNhan" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="matKhau" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="hoTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PhieuKham_BenhNhan">
+          <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="1" />
+          <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BenhNhan">
+              <PropertyRef Name="maBN" />
+            </Principal>
+            <Dependent Role="PhieuKham">
+              <PropertyRef Name="maBN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="qlPhongKhamDongYEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BenhNhans" EntityType="Self.BenhNhan" />
+          <EntitySet Name="PhieuKhams" EntityType="Self.PhieuKham" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <AssociationSet Name="FK_PhieuKham_BenhNhan" Association="Self.FK_PhieuKham_BenhNhan">
+            <End Role="BenhNhan" EntitySet="BenhNhans" />
+            <End Role="PhieuKham" EntitySet="PhieuKhams" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="qlPhongKhamDongYModelStoreContainer" CdmEntityContainer="qlPhongKhamDongYEntities">
+          <EntitySetMapping Name="BenhNhans">
+            <EntityTypeMapping TypeName="qlPhongKhamDongYModel.BenhNhan">
+              <MappingFragment StoreEntitySet="BenhNhan">
+                <ScalarProperty Name="maBN" ColumnName="maBN" />
+                <ScalarProperty Name="hoTenBN" ColumnName="hoTenBN" />
+                <ScalarProperty Name="ngaySinh" ColumnName="ngaySinh" />
+                <ScalarProperty Name="gioiTinh" ColumnName="gioiTinh" />
+                <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+                <ScalarProperty Name="dienThoai" ColumnName="dienThoai" />
+                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuKhams">
+            <EntityTypeMapping TypeName="qlPhongKhamDongYModel.PhieuKham">
+              <MappingFragment StoreEntitySet="PhieuKham">
+                <ScalarProperty Name="maPK" ColumnName="maPK" />
+                <ScalarProperty Name="maBN" ColumnName="maBN" />
+                <ScalarProperty Name="hoTenBN" ColumnName="hoTenBN" />
+                <ScalarProperty Name="ngaySinh" ColumnName="ngaySinh" />
+                <ScalarProperty Name="gioiTinh" ColumnName="gioiTinh" />
+                <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+                <ScalarProperty Name="dienThoai" ColumnName="dienThoai" />
+                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+                <ScalarProperty Name="chuanDoan" ColumnName="chuanDoan" />
+                <ScalarProperty Name="noiDung" ColumnName="noiDung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="qlPhongKhamDongYModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+                <ScalarProperty Name="hoTen" ColumnName="hoTen" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
