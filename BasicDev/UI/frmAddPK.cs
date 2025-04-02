@@ -29,7 +29,6 @@ namespace QLPHONGKHAM.UI
                 string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
                 string.IsNullOrWhiteSpace(txtDienThoai.Text) ||
                 string.IsNullOrWhiteSpace(txtCCCD.Text) ||
-                string.IsNullOrWhiteSpace(txtMaPK.Text) ||
                 string.IsNullOrWhiteSpace(txtChuanDoan.Text) ||
                 string.IsNullOrWhiteSpace(txtNoiDung.Text))
             {
@@ -82,7 +81,6 @@ namespace QLPHONGKHAM.UI
             txtDiaChi.Text = txtDiaChi.Text.Trim();
             txtDienThoai.Text = txtDienThoai.Text.Trim();
             txtCCCD.Text = txtCCCD.Text.Trim();
-            txtMaPK.Text = txtMaPK.Text.Trim();
             txtChuanDoan.Text = txtChuanDoan.Text.Trim();
             txtNoiDung.Text = txtNoiDung.Text.Trim();
         }
@@ -114,7 +112,6 @@ namespace QLPHONGKHAM.UI
             }
             _pk = new PHIEUKHAM();
             PhieuKham pk = new PhieuKham();
-            pk.maPK = txtMaPK.Text;
             pk.maBN = txtMaBN.Text;
             pk.hoTenBN = txtHoTenBN.Text;
             pk.ngaySinh = dateNgaySinh.Value;

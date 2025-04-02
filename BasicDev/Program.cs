@@ -22,7 +22,7 @@ namespace BasicDev {
                 {
                     Application.Run(new frmMain());
                 }
-            } 
+            };
         }
     }
 }

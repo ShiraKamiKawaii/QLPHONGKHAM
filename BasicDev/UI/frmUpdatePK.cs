@@ -128,7 +128,7 @@ namespace QLPHONGKHAM.UI
             }
             _pk = new PHIEUKHAM();
             PhieuKham pk = new PhieuKham();
-            pk.maPK = txtMaPK.Text;
+            pk.maPK = int.Parse(txtMaPK.Text);
             pk.maBN = txtMaBN.Text;
             pk.hoTenBN = txtHoTenBN.Text;
             pk.ngaySinh = dateNgaySinh.Value;

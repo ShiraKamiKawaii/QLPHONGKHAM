@@ -26,7 +26,7 @@ namespace DataLayer
         }
     
         public virtual DbSet<BenhNhan> BenhNhan { get; set; }
-        public virtual DbSet<PhieuKham> PhieuKhams { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<PhieuKham> PhieuKham { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
     }
 }

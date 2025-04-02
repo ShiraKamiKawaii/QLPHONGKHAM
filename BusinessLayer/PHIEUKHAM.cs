@@ -14,16 +14,16 @@ namespace BusinessLayer
         qlPhongKhamDongYEntities db = new qlPhongKhamDongYEntities();
         public List<PhieuKham> getList()
         {
-            return db.PhieuKhams.ToList();
+            return db.PhieuKham.ToList();
         }
-        public PhieuKham getItem(string maPK)
+        public PhieuKham getItem(int maPK)
         {
-            return db.PhieuKhams.FirstOrDefault(x => x.maPK == maPK);
+            return db.PhieuKham.FirstOrDefault(x => x.maPK == maPK);
         }
         public PhieuKham Add(PhieuKham pk)
         {
 
-            db.PhieuKhams.Add(pk);
+            db.PhieuKham.Add(pk);
             db.SaveChanges();
             return pk;
 
@@ -32,7 +32,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _pk = db.PhieuKhams.FirstOrDefault(x => x.maPK == pk.maPK);
+                var _pk = db.PhieuKham.FirstOrDefault(x => x.maPK == pk.maPK);
                 _pk.maBN = pk.maBN;
                 _pk.hoTenBN = pk.hoTenBN;
                 _pk.diaChi = pk.diaChi;
@@ -50,12 +50,12 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + e.Message);
             }
         }
-        public void Delete(string maPK)
+        public void Delete(int maPK)
         {
             try
             {
-                var _pk = db.PhieuKhams.FirstOrDefault(x => x.maPK == maPK);
-                db.PhieuKhams.Remove(_pk);
+                var _pk = db.PhieuKham.FirstOrDefault(x => x.maPK == maPK);
+                db.PhieuKham.Remove(_pk);
                 db.SaveChanges();
             }
             catch (Exception e)

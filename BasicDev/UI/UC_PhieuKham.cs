@@ -61,7 +61,7 @@ namespace QLPHONGKHAM.UI
         {
             _pk = new PHIEUKHAM();
             _id = gv_DanhSach.GetFocusedRowCellValue(maPK).ToString();
-            var pk = _pk.getItem(_id);
+            var pk = _pk.getItem(int.Parse(_id));
             frmUpdatePK frmPK = new frmUpdatePK(pk);
             frmPK.FormClosed += (s, args) => LoadData();
             ResetValue();
@@ -72,7 +72,7 @@ namespace QLPHONGKHAM.UI
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _pk.Delete(_id);
+                _pk.Delete(int.Parse(_id));
                 ResetValue();
                 LoadData();
             }
@@ -82,8 +82,8 @@ namespace QLPHONGKHAM.UI
             if (gv_DanhSach.RowCount > 0)
             {
                 _id = gv_DanhSach.GetFocusedRowCellValue(maPK).ToString();
-                var pk = _pk.getItem(_id);
-                txtMaPK.Text = pk.maPK;
+                var pk = _pk.getItem(int.Parse(_id));
+                txtMaPK.Text = pk.maPK.ToString();
                 txtMaBN.Text = pk.maBN;
                 txtHoTenBN.Text = pk.hoTenBN;
                 dateNgaySinh.Value = pk.ngaySinh;
