@@ -40,13 +40,10 @@ namespace QLPHONGKHAM.UI
                 taiKhoan=txtTaiKhoan.Text,
                 matKhau = txtMatKhau.Text
             };
-            
-            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text) || string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            TaiKhoan user = _tk.CheckLogin(tk);
+            if (user != null)
             {
-                MessageBox.Show("Tài khoản và mật khẩu không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); return;
-            }
-            if (_tk.CheckLogin(tk))
-            {
+                UserRole = user.role;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
