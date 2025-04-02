@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace QLPHONGKHAM.UI
 {
-	public partial class frmAddTK: DevExpress.XtraEditors.XtraForm
+    public partial class frmAddTK : DevExpress.XtraEditors.XtraForm
 	{
         public frmAddTK()
 		{
