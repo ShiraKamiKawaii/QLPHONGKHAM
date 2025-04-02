@@ -343,6 +343,7 @@
             ClientSize = new System.Drawing.Size(405, 428);
             Controls.Add(layoutControl2);
             Controls.Add(tbBN);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmAddBN";

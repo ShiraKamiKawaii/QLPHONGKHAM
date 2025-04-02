@@ -444,6 +444,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(587, 653);
             Controls.Add(layoutControl1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmUpdatePK";

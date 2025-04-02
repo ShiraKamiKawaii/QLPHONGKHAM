@@ -39,9 +39,9 @@
             gv_DanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             ID = new DevExpress.XtraGrid.Columns.GridColumn();
             taiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
-            matKhau = new DevExpress.XtraGrid.Columns.GridColumn();
             hoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             role = new DevExpress.XtraGrid.Columns.GridColumn();
+            matKhau = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
             panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)panel_button).BeginInit();
@@ -142,7 +142,7 @@
             gv_DanhSach.Appearance.FixedLine.BackColor = System.Drawing.Color.Lime;
             gv_DanhSach.Appearance.FixedLine.Options.UseBackColor = true;
             gv_DanhSach.Appearance.HeaderPanel.BackColor = System.Drawing.Color.White;
-            gv_DanhSach.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            gv_DanhSach.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             gv_DanhSach.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
             gv_DanhSach.Appearance.HeaderPanel.Options.UseBackColor = true;
             gv_DanhSach.Appearance.HeaderPanel.Options.UseFont = true;
@@ -157,6 +157,7 @@
             gv_DanhSach.OptionsEditForm.EditFormColumnCount = 2;
             gv_DanhSach.OptionsSelection.EnableAppearanceFocusedCell = false;
             gv_DanhSach.OptionsView.ShowGroupPanel = false;
+            gv_DanhSach.Click += gv_DanhSach_Click;
             // 
             // ID
             // 
@@ -174,14 +175,6 @@
             taiKhoan.Visible = true;
             taiKhoan.VisibleIndex = 1;
             // 
-            // matKhau
-            // 
-            matKhau.Caption = "Mật khẩu";
-            matKhau.FieldName = "matKhau";
-            matKhau.Name = "matKhau";
-            matKhau.Visible = true;
-            matKhau.VisibleIndex = 2;
-            // 
             // hoTen
             // 
             hoTen.Caption = "Họ và tên";
@@ -197,6 +190,14 @@
             role.Name = "role";
             role.Visible = true;
             role.VisibleIndex = 4;
+            // 
+            // matKhau
+            // 
+            matKhau.Caption = "Mật khẩu";
+            matKhau.FieldName = "matKhau";
+            matKhau.Name = "matKhau";
+            matKhau.Visible = true;
+            matKhau.VisibleIndex = 2;
             // 
             // UC_TaiKhoan
             // 
@@ -229,8 +230,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gv_DanhSach;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn taiKhoan;
-        private DevExpress.XtraGrid.Columns.GridColumn matKhau;
         private DevExpress.XtraGrid.Columns.GridColumn hoTen;
         private DevExpress.XtraGrid.Columns.GridColumn role;
+        private DevExpress.XtraGrid.Columns.GridColumn matKhau;
     }
 }

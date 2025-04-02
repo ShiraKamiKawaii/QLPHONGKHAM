@@ -103,5 +103,10 @@ namespace QLPHONGKHAM.UI
                 txtNoiDung.Rtf = pk.noiDung;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

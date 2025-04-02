@@ -71,6 +71,8 @@
             layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            label1 = new System.Windows.Forms.Label();
+            layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stackPanel1).BeginInit();
@@ -97,16 +99,19 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem6).BeginInit();
             SuspendLayout();
             // 
             // layoutControl1
             // 
+            layoutControl1.Controls.Add(label1);
             layoutControl1.Controls.Add(stackPanel1);
             layoutControl1.Controls.Add(gc_DanhSach);
             layoutControl1.Controls.Add(tablePanel1);
             layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             layoutControl1.Location = new System.Drawing.Point(0, 0);
             layoutControl1.Name = "layoutControl1";
+            layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1125, 391, 650, 400);
             layoutControl1.Root = Root;
             layoutControl1.Size = new System.Drawing.Size(816, 683);
             layoutControl1.TabIndex = 0;
@@ -117,10 +122,10 @@
             stackPanel1.Controls.Add(btnAddPK);
             stackPanel1.Controls.Add(btnEditPK);
             stackPanel1.Controls.Add(btnDelPK);
-            stackPanel1.Location = new System.Drawing.Point(12, 606);
+            stackPanel1.Location = new System.Drawing.Point(12, 603);
             stackPanel1.Name = "stackPanel1";
-            stackPanel1.Size = new System.Drawing.Size(792, 65);
-            stackPanel1.TabIndex = 4;
+            stackPanel1.Size = new System.Drawing.Size(792, 68);
+            stackPanel1.TabIndex = 3;
             stackPanel1.UseSkinIndents = true;
             // 
             // btnAddPK
@@ -128,7 +133,7 @@
             btnAddPK.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnAddPK.Appearance.Options.UseFont = true;
             btnAddPK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnAddPK.ImageOptions.Image");
-            btnAddPK.Location = new System.Drawing.Point(14, 10);
+            btnAddPK.Location = new System.Drawing.Point(14, 11);
             btnAddPK.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             btnAddPK.Name = "btnAddPK";
             btnAddPK.Size = new System.Drawing.Size(103, 44);
@@ -141,7 +146,7 @@
             btnEditPK.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnEditPK.Appearance.Options.UseFont = true;
             btnEditPK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnEditPK.ImageOptions.Image");
-            btnEditPK.Location = new System.Drawing.Point(170, 10);
+            btnEditPK.Location = new System.Drawing.Point(170, 11);
             btnEditPK.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             btnEditPK.Name = "btnEditPK";
             btnEditPK.Size = new System.Drawing.Size(103, 44);
@@ -154,7 +159,7 @@
             btnDelPK.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnDelPK.Appearance.Options.UseFont = true;
             btnDelPK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnDelPK.ImageOptions.Image");
-            btnDelPK.Location = new System.Drawing.Point(325, 10);
+            btnDelPK.Location = new System.Drawing.Point(325, 11);
             btnDelPK.Name = "btnDelPK";
             btnDelPK.Size = new System.Drawing.Size(103, 44);
             btnDelPK.TabIndex = 0;
@@ -163,11 +168,11 @@
             // 
             // gc_DanhSach
             // 
-            gc_DanhSach.Location = new System.Drawing.Point(24, 45);
+            gc_DanhSach.Location = new System.Drawing.Point(24, 92);
             gc_DanhSach.MainView = gv_DanhSach;
             gc_DanhSach.Name = "gc_DanhSach";
-            gc_DanhSach.Size = new System.Drawing.Size(307, 545);
-            gc_DanhSach.TabIndex = 8;
+            gc_DanhSach.Size = new System.Drawing.Size(324, 495);
+            gc_DanhSach.TabIndex = 2;
             gc_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gv_DanhSach });
             // 
             // gv_DanhSach
@@ -228,11 +233,11 @@
             tablePanel1.Controls.Add(labelControl3);
             tablePanel1.Controls.Add(labelControl2);
             tablePanel1.Controls.Add(labelControl1);
-            tablePanel1.Location = new System.Drawing.Point(359, 45);
+            tablePanel1.Location = new System.Drawing.Point(376, 92);
             tablePanel1.Name = "tablePanel1";
             tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 176F) });
-            tablePanel1.Size = new System.Drawing.Size(433, 545);
-            tablePanel1.TabIndex = 7;
+            tablePanel1.Size = new System.Drawing.Size(416, 495);
+            tablePanel1.TabIndex = 0;
             tablePanel1.UseSkinIndents = true;
             // 
             // layoutControl2
@@ -240,19 +245,19 @@
             tablePanel1.SetColumn(layoutControl2, 1);
             layoutControl2.Controls.Add(radioNu);
             layoutControl2.Controls.Add(radioNam);
-            layoutControl2.Location = new System.Drawing.Point(105, 168);
+            layoutControl2.Location = new System.Drawing.Point(102, 168);
             layoutControl2.Name = "layoutControl2";
             layoutControl2.Root = layoutControlGroup3;
             tablePanel1.SetRow(layoutControl2, 4);
-            layoutControl2.Size = new System.Drawing.Size(315, 35);
+            layoutControl2.Size = new System.Drawing.Size(301, 35);
             layoutControl2.TabIndex = 19;
             layoutControl2.Text = "layoutControl2";
             // 
             // radioNu
             // 
-            radioNu.Location = new System.Drawing.Point(158, 2);
+            radioNu.Location = new System.Drawing.Point(151, 2);
             radioNu.Name = "radioNu";
-            radioNu.Size = new System.Drawing.Size(155, 25);
+            radioNu.Size = new System.Drawing.Size(148, 25);
             radioNu.TabIndex = 5;
             radioNu.TabStop = true;
             radioNu.Text = "Nữ";
@@ -264,7 +269,7 @@
             radioNam.Enabled = false;
             radioNam.Location = new System.Drawing.Point(2, 2);
             radioNam.Name = "radioNam";
-            radioNam.Size = new System.Drawing.Size(152, 25);
+            radioNam.Size = new System.Drawing.Size(145, 25);
             radioNam.TabIndex = 4;
             radioNam.TabStop = true;
             radioNam.Text = "Nam";
@@ -276,7 +281,7 @@
             layoutControlGroup3.GroupBordersVisible = false;
             layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem3, layoutControlItem4 });
             layoutControlGroup3.Name = "layoutControlGroup3";
-            layoutControlGroup3.Size = new System.Drawing.Size(315, 35);
+            layoutControlGroup3.Size = new System.Drawing.Size(301, 35);
             layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem3
@@ -284,16 +289,15 @@
             layoutControlItem3.Control = radioNam;
             layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new System.Drawing.Size(156, 35);
+            layoutControlItem3.Size = new System.Drawing.Size(149, 35);
             layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             layoutControlItem4.Control = radioNu;
-            layoutControlItem4.Enabled = false;
-            layoutControlItem4.Location = new System.Drawing.Point(156, 0);
+            layoutControlItem4.Location = new System.Drawing.Point(149, 0);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new System.Drawing.Size(159, 35);
+            layoutControlItem4.Size = new System.Drawing.Size(152, 35);
             layoutControlItem4.TextVisible = false;
             // 
             // dateNgaySinh
@@ -302,10 +306,10 @@
             dateNgaySinh.CustomFormat = "dd/MM/yyyy";
             dateNgaySinh.Enabled = false;
             dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            dateNgaySinh.Location = new System.Drawing.Point(105, 136);
+            dateNgaySinh.Location = new System.Drawing.Point(102, 136);
             dateNgaySinh.Name = "dateNgaySinh";
             tablePanel1.SetRow(dateNgaySinh, 3);
-            dateNgaySinh.Size = new System.Drawing.Size(315, 21);
+            dateNgaySinh.Size = new System.Drawing.Size(301, 21);
             dateNgaySinh.TabIndex = 18;
             // 
             // txtNoiDung
@@ -313,10 +317,10 @@
             tablePanel1.SetColumn(txtNoiDung, 1);
             txtNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             txtNoiDung.Enabled = false;
-            txtNoiDung.Location = new System.Drawing.Point(105, 363);
+            txtNoiDung.Location = new System.Drawing.Point(102, 363);
             txtNoiDung.Name = "txtNoiDung";
             tablePanel1.SetRow(txtNoiDung, 9);
-            txtNoiDung.Size = new System.Drawing.Size(315, 169);
+            txtNoiDung.Size = new System.Drawing.Size(301, 119);
             txtNoiDung.TabIndex = 17;
             txtNoiDung.Text = "";
             // 
@@ -324,70 +328,70 @@
             // 
             tablePanel1.SetColumn(txtChuanDoan, 1);
             txtChuanDoan.Enabled = false;
-            txtChuanDoan.Location = new System.Drawing.Point(105, 331);
+            txtChuanDoan.Location = new System.Drawing.Point(102, 331);
             txtChuanDoan.Name = "txtChuanDoan";
             tablePanel1.SetRow(txtChuanDoan, 8);
-            txtChuanDoan.Size = new System.Drawing.Size(315, 20);
+            txtChuanDoan.Size = new System.Drawing.Size(301, 20);
             txtChuanDoan.TabIndex = 16;
             // 
             // txtCCCD
             // 
             tablePanel1.SetColumn(txtCCCD, 1);
             txtCCCD.Enabled = false;
-            txtCCCD.Location = new System.Drawing.Point(105, 292);
+            txtCCCD.Location = new System.Drawing.Point(102, 292);
             txtCCCD.Name = "txtCCCD";
             tablePanel1.SetRow(txtCCCD, 7);
-            txtCCCD.Size = new System.Drawing.Size(315, 20);
+            txtCCCD.Size = new System.Drawing.Size(301, 20);
             txtCCCD.TabIndex = 15;
             // 
             // txtDienThoai
             // 
             tablePanel1.SetColumn(txtDienThoai, 1);
             txtDienThoai.Enabled = false;
-            txtDienThoai.Location = new System.Drawing.Point(105, 253);
+            txtDienThoai.Location = new System.Drawing.Point(102, 253);
             txtDienThoai.Name = "txtDienThoai";
             tablePanel1.SetRow(txtDienThoai, 6);
-            txtDienThoai.Size = new System.Drawing.Size(315, 20);
+            txtDienThoai.Size = new System.Drawing.Size(301, 20);
             txtDienThoai.TabIndex = 14;
             // 
             // txtDiaChi
             // 
             tablePanel1.SetColumn(txtDiaChi, 1);
             txtDiaChi.Enabled = false;
-            txtDiaChi.Location = new System.Drawing.Point(105, 214);
+            txtDiaChi.Location = new System.Drawing.Point(102, 214);
             txtDiaChi.Name = "txtDiaChi";
             tablePanel1.SetRow(txtDiaChi, 5);
-            txtDiaChi.Size = new System.Drawing.Size(315, 20);
+            txtDiaChi.Size = new System.Drawing.Size(301, 20);
             txtDiaChi.TabIndex = 13;
             // 
             // txtHoTenBN
             // 
             tablePanel1.SetColumn(txtHoTenBN, 1);
             txtHoTenBN.Enabled = false;
-            txtHoTenBN.Location = new System.Drawing.Point(105, 97);
+            txtHoTenBN.Location = new System.Drawing.Point(102, 97);
             txtHoTenBN.Name = "txtHoTenBN";
             tablePanel1.SetRow(txtHoTenBN, 2);
-            txtHoTenBN.Size = new System.Drawing.Size(315, 20);
+            txtHoTenBN.Size = new System.Drawing.Size(301, 20);
             txtHoTenBN.TabIndex = 12;
             // 
             // txtMaBN
             // 
             tablePanel1.SetColumn(txtMaBN, 1);
             txtMaBN.Enabled = false;
-            txtMaBN.Location = new System.Drawing.Point(105, 58);
+            txtMaBN.Location = new System.Drawing.Point(102, 58);
             txtMaBN.Name = "txtMaBN";
             tablePanel1.SetRow(txtMaBN, 1);
-            txtMaBN.Size = new System.Drawing.Size(315, 20);
+            txtMaBN.Size = new System.Drawing.Size(301, 20);
             txtMaBN.TabIndex = 11;
             // 
             // txtMaPK
             // 
             tablePanel1.SetColumn(txtMaPK, 1);
             txtMaPK.Enabled = false;
-            txtMaPK.Location = new System.Drawing.Point(105, 19);
+            txtMaPK.Location = new System.Drawing.Point(102, 19);
             txtMaPK.Name = "txtMaPK";
             tablePanel1.SetRow(txtMaPK, 0);
-            txtMaPK.Size = new System.Drawing.Size(315, 20);
+            txtMaPK.Size = new System.Drawing.Size(301, 20);
             txtMaPK.TabIndex = 10;
             // 
             // labelControl10
@@ -400,7 +404,7 @@
             labelControl10.Location = new System.Drawing.Point(13, 363);
             labelControl10.Name = "labelControl10";
             tablePanel1.SetRow(labelControl10, 9);
-            labelControl10.Size = new System.Drawing.Size(88, 169);
+            labelControl10.Size = new System.Drawing.Size(85, 119);
             labelControl10.TabIndex = 9;
             labelControl10.Text = "Nội dung";
             // 
@@ -413,7 +417,7 @@
             labelControl9.Location = new System.Drawing.Point(13, 324);
             labelControl9.Name = "labelControl9";
             tablePanel1.SetRow(labelControl9, 8);
-            labelControl9.Size = new System.Drawing.Size(88, 35);
+            labelControl9.Size = new System.Drawing.Size(85, 35);
             labelControl9.TabIndex = 8;
             labelControl9.Text = "Chuẩn đoán";
             // 
@@ -426,7 +430,7 @@
             labelControl8.Location = new System.Drawing.Point(13, 285);
             labelControl8.Name = "labelControl8";
             tablePanel1.SetRow(labelControl8, 7);
-            labelControl8.Size = new System.Drawing.Size(88, 35);
+            labelControl8.Size = new System.Drawing.Size(85, 35);
             labelControl8.TabIndex = 7;
             labelControl8.Text = "CCCD";
             // 
@@ -439,7 +443,7 @@
             labelControl7.Location = new System.Drawing.Point(13, 246);
             labelControl7.Name = "labelControl7";
             tablePanel1.SetRow(labelControl7, 6);
-            labelControl7.Size = new System.Drawing.Size(88, 35);
+            labelControl7.Size = new System.Drawing.Size(85, 35);
             labelControl7.TabIndex = 6;
             labelControl7.Text = "Điện thoại";
             // 
@@ -452,7 +456,7 @@
             labelControl6.Location = new System.Drawing.Point(13, 207);
             labelControl6.Name = "labelControl6";
             tablePanel1.SetRow(labelControl6, 5);
-            labelControl6.Size = new System.Drawing.Size(88, 35);
+            labelControl6.Size = new System.Drawing.Size(85, 35);
             labelControl6.TabIndex = 5;
             labelControl6.Text = "Địa chỉ";
             // 
@@ -465,7 +469,7 @@
             labelControl5.Location = new System.Drawing.Point(13, 168);
             labelControl5.Name = "labelControl5";
             tablePanel1.SetRow(labelControl5, 4);
-            labelControl5.Size = new System.Drawing.Size(88, 35);
+            labelControl5.Size = new System.Drawing.Size(85, 35);
             labelControl5.TabIndex = 4;
             labelControl5.Text = "Giới tính";
             // 
@@ -478,7 +482,7 @@
             labelControl4.Location = new System.Drawing.Point(13, 129);
             labelControl4.Name = "labelControl4";
             tablePanel1.SetRow(labelControl4, 3);
-            labelControl4.Size = new System.Drawing.Size(88, 35);
+            labelControl4.Size = new System.Drawing.Size(85, 35);
             labelControl4.TabIndex = 3;
             labelControl4.Text = "Ngày sinh";
             // 
@@ -491,7 +495,7 @@
             labelControl3.Location = new System.Drawing.Point(13, 90);
             labelControl3.Name = "labelControl3";
             tablePanel1.SetRow(labelControl3, 2);
-            labelControl3.Size = new System.Drawing.Size(88, 35);
+            labelControl3.Size = new System.Drawing.Size(85, 35);
             labelControl3.TabIndex = 2;
             labelControl3.Text = "Họ và tên";
             // 
@@ -504,7 +508,7 @@
             labelControl2.Location = new System.Drawing.Point(13, 51);
             labelControl2.Name = "labelControl2";
             tablePanel1.SetRow(labelControl2, 1);
-            labelControl2.Size = new System.Drawing.Size(88, 35);
+            labelControl2.Size = new System.Drawing.Size(85, 35);
             labelControl2.TabIndex = 1;
             labelControl2.Text = "Mã bệnh nhân";
             // 
@@ -517,7 +521,7 @@
             labelControl1.Location = new System.Drawing.Point(13, 12);
             labelControl1.Name = "labelControl1";
             tablePanel1.SetRow(labelControl1, 0);
-            labelControl1.Size = new System.Drawing.Size(88, 35);
+            labelControl1.Size = new System.Drawing.Size(85, 35);
             labelControl1.TabIndex = 0;
             labelControl1.Text = "Mã phiếu khám";
             // 
@@ -525,7 +529,7 @@
             // 
             Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             Root.GroupBordersVisible = false;
-            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem5, layoutControlGroup1, layoutControlGroup2 });
+            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem5, layoutControlItem6, layoutControlGroup1, layoutControlGroup2 });
             Root.Name = "Root";
             Root.Size = new System.Drawing.Size(816, 683);
             Root.TextVisible = false;
@@ -533,18 +537,18 @@
             // layoutControlItem5
             // 
             layoutControlItem5.Control = stackPanel1;
-            layoutControlItem5.Location = new System.Drawing.Point(0, 594);
+            layoutControlItem5.Location = new System.Drawing.Point(0, 591);
             layoutControlItem5.Name = "layoutControlItem5";
-            layoutControlItem5.Size = new System.Drawing.Size(796, 69);
+            layoutControlItem5.Size = new System.Drawing.Size(796, 72);
             layoutControlItem5.TextVisible = false;
             // 
             // layoutControlGroup1
             // 
             layoutControlGroup1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem2 });
-            layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            layoutControlGroup1.Location = new System.Drawing.Point(0, 47);
             layoutControlGroup1.Name = "layoutControlGroup1";
-            layoutControlGroup1.Size = new System.Drawing.Size(335, 594);
+            layoutControlGroup1.Size = new System.Drawing.Size(352, 544);
             layoutControlGroup1.Text = "Danh sách phiếu khám";
             // 
             // layoutControlItem2
@@ -552,16 +556,16 @@
             layoutControlItem2.Control = gc_DanhSach;
             layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new System.Drawing.Size(311, 549);
+            layoutControlItem2.Size = new System.Drawing.Size(328, 499);
             layoutControlItem2.TextVisible = false;
             // 
             // layoutControlGroup2
             // 
             layoutControlGroup2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1 });
-            layoutControlGroup2.Location = new System.Drawing.Point(335, 0);
+            layoutControlGroup2.Location = new System.Drawing.Point(352, 47);
             layoutControlGroup2.Name = "layoutControlGroup2";
-            layoutControlGroup2.Size = new System.Drawing.Size(461, 594);
+            layoutControlGroup2.Size = new System.Drawing.Size(444, 544);
             layoutControlGroup2.Text = "Thông tin phiếu khám";
             // 
             // layoutControlItem1
@@ -569,8 +573,28 @@
             layoutControlItem1.Control = tablePanel1;
             layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new System.Drawing.Size(437, 549);
+            layoutControlItem1.Size = new System.Drawing.Size(420, 499);
             layoutControlItem1.TextVisible = false;
+            // 
+            // label1
+            // 
+            label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            label1.ForeColor = System.Drawing.Color.LimeGreen;
+            label1.Location = new System.Drawing.Point(12, 12);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(792, 43);
+            label1.TabIndex = 1;
+            label1.Text = "Phiếu Khám Bệnh";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
+            // 
+            // layoutControlItem6
+            // 
+            layoutControlItem6.Control = label1;
+            layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            layoutControlItem6.Name = "layoutControlItem6";
+            layoutControlItem6.Size = new System.Drawing.Size(796, 47);
+            layoutControlItem6.TextVisible = false;
             // 
             // UC_PhieuKham
             // 
@@ -607,6 +631,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem2).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem6).EndInit();
             ResumeLayout(false);
         }
 
@@ -654,5 +679,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

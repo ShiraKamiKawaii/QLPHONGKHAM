@@ -48,9 +48,9 @@ namespace BasicDev.UI
             _tk = new TAIKHOAN();
             _id = gv_DanhSach.GetFocusedRowCellValue(ID).ToString();
             var tk = _tk.getItem(int.Parse(_id));
-            //frmUpdateBN frmBN = new frmUpdateBN(bn);
-            //frmBN.FormClosed += (s, args) => LoadData();
-            //frmBN.ShowDialog();
+            frmUpdateTK frmTk = new frmUpdateTK(tk);
+            frmTk.FormClosed += (s, args) => LoadData();
+            frmTk.ShowDialog();
         }
 
         private void btnXoaTK_Click(object sender, EventArgs e)
@@ -59,6 +59,15 @@ namespace BasicDev.UI
             {
                 _tk.Delete(int.Parse(_id));
                 LoadData();
+            }
+        }
+
+        private void gv_DanhSach_Click(object sender, EventArgs e)
+        {
+            if (gv_DanhSach.RowCount > 0)
+            {
+                _id = gv_DanhSach.GetFocusedRowCellValue(ID).ToString();
+                var tk = _tk.getItem(int.Parse(_id));
             }
         }
     }

@@ -8,19 +8,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BusinessLayer;
+using DataLayer;
 
 namespace QLPHONGKHAM.UI
 {
     public partial class frmUpdateTK : DevExpress.XtraEditors.XtraForm
-	{
+    {
         public frmUpdateTK(TaiKhoan tk)
-		{
+        {
             InitializeComponent();
             txtID.Text = tk.ID.ToString();
-            tk.taiKhoan = txtTaiKhoan.Text;
-            tk.matKhau = txtMatKhau.Text;
-            tk.hoTen = txtHoTen.Text;
-            tk.role = role.Text;
+            txtTaiKhoan.Text = tk.taiKhoan;
+            txtMatKhau.Text = tk.matKhau;
+            txtHoTen.Text = tk.hoTen;
+            role.Text = tk.role;
         }
         TAIKHOAN _tk;
 
@@ -69,6 +71,6 @@ namespace QLPHONGKHAM.UI
             txtTaiKhoan.Text = txtTaiKhoan.Text.Trim();
             txtMatKhau.Text = txtMatKhau.Text.Trim();
             txtHoTen.Text = txtHoTen.Text.Trim();
-		}
-	}
+        }
+    }
 }
