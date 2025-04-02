@@ -24,6 +24,7 @@ namespace DataLayer
         public string CCCD { get; set; }
         public string chuanDoan { get; set; }
         public string noiDung { get; set; }
+        public System.DateTime ngayLap { get; set; }
     
         public virtual BenhNhan BenhNhan { get; set; }
     }

@@ -95,7 +95,7 @@ namespace QLPHONGKHAM.UI
         private void TrimAllInputs()
         {
             txtMaBN.Text = txtMaBN.Text.Trim();
-            txtHoTenBN.Text = txtHoTenBN.Text.Trim();
+            txtHoTenBN.Text = FormatName(txtHoTenBN.Text);
             txtDiaChi.Text = txtDiaChi.Text.Trim();
             txtDienThoai.Text = txtDienThoai.Text.Trim();
             txtCCCD.Text = txtCCCD.Text.Trim();
@@ -140,6 +140,7 @@ namespace QLPHONGKHAM.UI
             pk.noiDung = txtNoiDung.Rtf;
             _pk.Update(pk);
             this.Close();
+            MessageBox.Show("Cập nhật thông tin phiếu khám thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

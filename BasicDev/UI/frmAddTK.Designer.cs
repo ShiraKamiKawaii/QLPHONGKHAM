@@ -32,7 +32,6 @@
             layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             btnSaveTK = new DevExpress.XtraEditors.SimpleButton();
-            role = new DevExpress.XtraEditors.ComboBoxEdit();
             txtHoTen = new DevExpress.XtraEditors.TextEdit();
             txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
@@ -40,16 +39,17 @@
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            role = new DevExpress.XtraEditors.TextEdit();
             Root = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tablePanel1).BeginInit();
             tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)role.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtHoTen.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtMatKhau.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtTaiKhoan.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)role.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
             SuspendLayout();
@@ -69,7 +69,6 @@
             // 
             tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] { new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 13.4F), new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 46.6F) });
             tablePanel1.Controls.Add(btnSaveTK);
-            tablePanel1.Controls.Add(role);
             tablePanel1.Controls.Add(txtHoTen);
             tablePanel1.Controls.Add(txtMatKhau);
             tablePanel1.Controls.Add(txtTaiKhoan);
@@ -77,6 +76,7 @@
             tablePanel1.Controls.Add(labelControl3);
             tablePanel1.Controls.Add(labelControl2);
             tablePanel1.Controls.Add(labelControl1);
+            tablePanel1.Controls.Add(role);
             tablePanel1.Location = new System.Drawing.Point(12, 12);
             tablePanel1.Name = "tablePanel1";
             tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F) });
@@ -94,6 +94,7 @@
             btnSaveTK.Appearance.Options.UseBorderColor = true;
             btnSaveTK.Appearance.Options.UseFont = true;
             tablePanel1.SetColumn(btnSaveTK, 1);
+            btnSaveTK.Cursor = System.Windows.Forms.Cursors.Hand;
             btnSaveTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSaveTK.ImageOptions.Image");
             btnSaveTK.Location = new System.Drawing.Point(92, 180);
             btnSaveTK.Name = "btnSaveTK";
@@ -103,20 +104,10 @@
             btnSaveTK.Text = "Lưu";
             btnSaveTK.Click += btnSaveTK_Click;
             // 
-            // role
-            // 
-            tablePanel1.SetColumn(role, 1);
-            role.Location = new System.Drawing.Point(92, 136);
-            role.Name = "role";
-            role.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            role.Properties.Items.AddRange(new object[] { "admin", "nhân viên" });
-            tablePanel1.SetRow(role, 3);
-            role.Size = new System.Drawing.Size(270, 20);
-            role.TabIndex = 7;
-            // 
             // txtHoTen
             // 
             tablePanel1.SetColumn(txtHoTen, 1);
+            txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtHoTen.Location = new System.Drawing.Point(92, 97);
             txtHoTen.Name = "txtHoTen";
             tablePanel1.SetRow(txtHoTen, 2);
@@ -126,6 +117,7 @@
             // txtMatKhau
             // 
             tablePanel1.SetColumn(txtMatKhau, 1);
+            txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtMatKhau.Location = new System.Drawing.Point(92, 58);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Properties.UseSystemPasswordChar = true;
@@ -136,6 +128,7 @@
             // txtTaiKhoan
             // 
             tablePanel1.SetColumn(txtTaiKhoan, 1);
+            txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtTaiKhoan.Location = new System.Drawing.Point(92, 19);
             txtTaiKhoan.Name = "txtTaiKhoan";
             tablePanel1.SetRow(txtTaiKhoan, 0);
@@ -198,6 +191,13 @@
             labelControl1.TabIndex = 0;
             labelControl1.Text = "Tài khoản";
             // 
+            // role
+            // 
+            role.Location = new System.Drawing.Point(92, 136);
+            role.Name = "role";
+            role.Size = new System.Drawing.Size(270, 20);
+            role.TabIndex = 7;
+            // 
             // Root
             // 
             Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -233,10 +233,10 @@
             ((System.ComponentModel.ISupportInitialize)tablePanel1).EndInit();
             tablePanel1.ResumeLayout(false);
             tablePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)role.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtHoTen.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtMatKhau.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtTaiKhoan.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)role.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)Root).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
             ResumeLayout(false);
@@ -252,10 +252,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraEditors.ComboBoxEdit role;
         private DevExpress.XtraEditors.TextEdit txtHoTen;
         private DevExpress.XtraEditors.TextEdit txtMatKhau;
         private DevExpress.XtraEditors.TextEdit txtTaiKhoan;
         private DevExpress.XtraEditors.SimpleButton btnSaveTK;
+        private DevExpress.XtraEditors.TextEdit role;
     }
 }

@@ -45,11 +45,10 @@ namespace BasicDev.UI
 
         private void btnSuaTK_Click(object sender, EventArgs e)
         {
-            _tk = new TAIKHOAN();
             _id = gv_DanhSach.GetFocusedRowCellValue(ID).ToString();
             var tk = _tk.getItem(int.Parse(_id));
             frmUpdateTK frmTk = new frmUpdateTK(tk);
-            frmTk.FormClosed += (s, args) => LoadData();
+            frmTk.FormClosed += (s, args) => Reload();
             frmTk.ShowDialog();
         }
 

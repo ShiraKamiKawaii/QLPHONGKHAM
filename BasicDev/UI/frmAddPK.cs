@@ -77,7 +77,7 @@ namespace QLPHONGKHAM.UI
         private void TrimAllInputs()
         {
             txtMaBN.Text = txtMaBN.Text.Trim();
-            txtHoTenBN.Text = txtHoTenBN.Text.Trim();
+            txtHoTenBN.Text =FormatName(txtHoTenBN.Text);
             txtDiaChi.Text = txtDiaChi.Text.Trim();
             txtDienThoai.Text = txtDienThoai.Text.Trim();
             txtCCCD.Text = txtCCCD.Text.Trim();
@@ -121,8 +121,10 @@ namespace QLPHONGKHAM.UI
             pk.CCCD = txtCCCD.Text;
             pk.chuanDoan = txtChuanDoan.Text;
             pk.noiDung = txtNoiDung.Rtf;
+            pk.ngayLap = DateTime.Now;
             _pk.Add(pk);
             this.Close();
+            MessageBox.Show("Thêm phiếu khám thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void txtCCCD_TextChanged(object sender, EventArgs e)
         {

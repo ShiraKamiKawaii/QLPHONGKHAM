@@ -87,13 +87,14 @@ namespace BasicDev.UI
         }
         private void btnEditBN_Click(object sender, EventArgs e)
         {
-            _bn = new BENHNHAN();
             _id = gv_DanhSach.GetFocusedRowCellValue(maBN).ToString();
             var bn = _bn.getItem(_id);
             frmUpdateBN frmBN = new frmUpdateBN(bn);
-            frmBN.FormClosed +=(s,args) => LoadData();
+            if (frmBN.ShowDialog() == DialogResult.OK)
+            {
+                Reload();
+            }
             ResetValue();
-            frmBN.ShowDialog();
         }
     }
 }

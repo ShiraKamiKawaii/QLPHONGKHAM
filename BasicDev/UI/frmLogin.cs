@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using BusinessLayer;
 using DataLayer;
 using BasicDev;
+using DevExpress.XtraRichEdit.Import.Doc;
 
 namespace QLPHONGKHAM.UI
 {
@@ -20,6 +21,7 @@ namespace QLPHONGKHAM.UI
         {
             InitializeComponent();
         }
+        public string UserRole { get; set; }
         TAIKHOAN _tk;
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -30,14 +32,19 @@ namespace QLPHONGKHAM.UI
 
         private void btnCLose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text) || string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            {
+                MessageBox.Show("Tài khoản và mật khẩu không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); return;
+            }
             TaiKhoan tk = new TaiKhoan()
             {
-                taiKhoan=txtTaiKhoan.Text,
+                taiKhoan = txtTaiKhoan.Text,
                 matKhau = txtMatKhau.Text
             };
             TaiKhoan user = _tk.CheckLogin(tk);
@@ -45,7 +52,7 @@ namespace QLPHONGKHAM.UI
             {
                 UserRole = user.role;
                 this.DialogResult = DialogResult.OK;
-                this.Close();
+                this.Hide();
             }
             else
             {

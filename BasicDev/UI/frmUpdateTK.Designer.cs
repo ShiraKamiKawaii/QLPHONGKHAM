@@ -155,6 +155,7 @@
             btnSaveTK.Appearance.Options.UseBorderColor = true;
             btnSaveTK.Appearance.Options.UseFont = true;
             tablePanel1.SetColumn(btnSaveTK, 1);
+            btnSaveTK.Cursor = System.Windows.Forms.Cursors.Hand;
             btnSaveTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSaveTK.ImageOptions.Image");
             btnSaveTK.Location = new System.Drawing.Point(93, 217);
             btnSaveTK.Name = "btnSaveTK";
@@ -178,6 +179,7 @@
             // txtHoTen
             // 
             tablePanel1.SetColumn(txtHoTen, 1);
+            txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtHoTen.Location = new System.Drawing.Point(93, 136);
             txtHoTen.Name = "txtHoTen";
             tablePanel1.SetRow(txtHoTen, 3);
@@ -187,6 +189,7 @@
             // txtMatKhau
             // 
             tablePanel1.SetColumn(txtMatKhau, 1);
+            txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtMatKhau.Location = new System.Drawing.Point(93, 97);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Properties.UseSystemPasswordChar = true;
@@ -197,6 +200,7 @@
             // txtTaiKhoan
             // 
             tablePanel1.SetColumn(txtTaiKhoan, 1);
+            txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtTaiKhoan.Location = new System.Drawing.Point(93, 58);
             txtTaiKhoan.Name = "txtTaiKhoan";
             tablePanel1.SetRow(txtTaiKhoan, 1);

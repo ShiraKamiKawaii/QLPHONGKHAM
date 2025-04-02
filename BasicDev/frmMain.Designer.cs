@@ -61,7 +61,7 @@
             MenuBar.Location = new System.Drawing.Point(0, 31);
             MenuBar.Name = "MenuBar";
             MenuBar.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            MenuBar.Size = new System.Drawing.Size(250, 565);
+            MenuBar.Size = new System.Drawing.Size(245, 718);
             MenuBar.TabIndex = 1;
             MenuBar.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -78,15 +78,16 @@
             menuBN.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("menuBN.ImageOptions.SvgImage");
             menuBN.Name = "menuBN";
             menuBN.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            menuBN.Text = "Quản Lý Bệnh Nhân";
+            menuBN.Text = "Bệnh Nhân";
             menuBN.Click += MenuBN_Click;
             // 
             // menuTK
             // 
+            menuTK.AccessibleName = "menuTK";
             menuTK.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("menuTK.ImageOptions.SvgImage");
             menuTK.Name = "menuTK";
             menuTK.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            menuTK.Text = "Quản lý tài khoản";
+            menuTK.Text = "Tài Khoản";
             menuTK.Click += MenuTK_Click;
             // 
             // menuDangXuat
@@ -95,6 +96,7 @@
             menuDangXuat.Name = "menuDangXuat";
             menuDangXuat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             menuDangXuat.Text = "Đăng xuất";
+            menuDangXuat.Click += menuDangXuat_Click;
             // 
             // frm
             // 
@@ -102,17 +104,17 @@
             frm.Location = new System.Drawing.Point(0, 0);
             frm.Manager = formManager;
             frm.Name = "frm";
-            frm.Size = new System.Drawing.Size(1227, 31);
+            frm.Size = new System.Drawing.Size(1275, 31);
             frm.TabIndex = 2;
             frm.TabStop = false;
-            frm.Text = "Phòng Khám Đông Y Long Chi";
             // 
             // mainContener
             // 
+            mainContener.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             mainContener.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainContener.Location = new System.Drawing.Point(250, 31);
+            mainContener.Location = new System.Drawing.Point(245, 31);
             mainContener.Name = "mainContener";
-            mainContener.Size = new System.Drawing.Size(977, 565);
+            mainContener.Size = new System.Drawing.Size(1030, 718);
             mainContener.TabIndex = 3;
             // 
             // frmMain
@@ -120,17 +122,19 @@
             Appearance.Options.UseFont = true;
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1227, 596);
+            ClientSize = new System.Drawing.Size(1275, 749);
             Controls.Add(mainContener);
             Controls.Add(MenuBar);
             Controls.Add(frm);
             FluentDesignFormControl = frm;
             Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            IconOptions.Image = (System.Drawing.Image)resources.GetObject("frmMain.IconOptions.Image");
             Name = "frmMain";
             NavigationControl = MenuBar;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Phòng Khám Đông Y Long Chi";
+            Load += frmMain_Load;
             ((System.ComponentModel.ISupportInitialize)formManager).EndInit();
             ((System.ComponentModel.ISupportInitialize)MenuBar).EndInit();
             ((System.ComponentModel.ISupportInitialize)frm).EndInit();

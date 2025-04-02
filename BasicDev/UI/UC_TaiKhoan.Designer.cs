@@ -41,7 +41,6 @@
             taiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
             hoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             role = new DevExpress.XtraGrid.Columns.GridColumn();
-            matKhau = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
             panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)panel_button).BeginInit();
@@ -89,6 +88,7 @@
             btnThemTK.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnThemTK.Appearance.Options.UseFont = true;
             btnThemTK.AutoWidthInLayoutControl = true;
+            btnThemTK.Cursor = System.Windows.Forms.Cursors.Hand;
             btnThemTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnThemTK.ImageOptions.Image");
             btnThemTK.Location = new System.Drawing.Point(14, 12);
             btnThemTK.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
@@ -105,10 +105,12 @@
             btnSuaTK.AllowFocus = false;
             btnSuaTK.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnSuaTK.Appearance.Options.UseFont = true;
+            btnSuaTK.Cursor = System.Windows.Forms.Cursors.Hand;
             btnSuaTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSuaTK.ImageOptions.Image");
             btnSuaTK.Location = new System.Drawing.Point(159, 12);
             btnSuaTK.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             btnSuaTK.Name = "btnSuaTK";
+            btnSuaTK.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             btnSuaTK.Size = new System.Drawing.Size(92, 50);
             btnSuaTK.TabIndex = 1;
             btnSuaTK.Text = "Sửa";
@@ -119,9 +121,11 @@
             btnXoaTK.AllowFocus = false;
             btnXoaTK.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnXoaTK.Appearance.Options.UseFont = true;
+            btnXoaTK.Cursor = System.Windows.Forms.Cursors.Hand;
             btnXoaTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnXoaTK.ImageOptions.Image");
             btnXoaTK.Location = new System.Drawing.Point(303, 12);
             btnXoaTK.Name = "btnXoaTK";
+            btnXoaTK.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             btnXoaTK.Size = new System.Drawing.Size(92, 50);
             btnXoaTK.TabIndex = 0;
             btnXoaTK.Text = "Xóa";
@@ -149,7 +153,7 @@
             gv_DanhSach.Appearance.HeaderPanel.Options.UseForeColor = true;
             gv_DanhSach.AppearancePrint.HeaderPanel.BackColor = System.Drawing.Color.Lime;
             gv_DanhSach.AppearancePrint.HeaderPanel.Options.UseBackColor = true;
-            gv_DanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID, taiKhoan, matKhau, hoTen, role });
+            gv_DanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID, taiKhoan, hoTen, role });
             gv_DanhSach.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             gv_DanhSach.GridControl = gc_DanhSach;
             gv_DanhSach.Name = "gv_DanhSach";
@@ -161,6 +165,10 @@
             // 
             // ID
             // 
+            ID.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            ID.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            ID.AppearanceHeader.Options.UseBackColor = true;
+            ID.AppearanceHeader.Options.UseFont = true;
             ID.Caption = "ID";
             ID.FieldName = "ID";
             ID.Name = "ID";
@@ -169,6 +177,10 @@
             // 
             // taiKhoan
             // 
+            taiKhoan.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            taiKhoan.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            taiKhoan.AppearanceHeader.Options.UseBackColor = true;
+            taiKhoan.AppearanceHeader.Options.UseFont = true;
             taiKhoan.Caption = "Tài khoản";
             taiKhoan.FieldName = "taiKhoan";
             taiKhoan.Name = "taiKhoan";
@@ -177,27 +189,27 @@
             // 
             // hoTen
             // 
+            hoTen.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            hoTen.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            hoTen.AppearanceHeader.Options.UseBackColor = true;
+            hoTen.AppearanceHeader.Options.UseFont = true;
             hoTen.Caption = "Họ và tên";
             hoTen.FieldName = "hoTen";
             hoTen.Name = "hoTen";
             hoTen.Visible = true;
-            hoTen.VisibleIndex = 3;
+            hoTen.VisibleIndex = 2;
             // 
             // role
             // 
+            role.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            role.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            role.AppearanceHeader.Options.UseBackColor = true;
+            role.AppearanceHeader.Options.UseFont = true;
             role.Caption = "role";
             role.FieldName = "role";
             role.Name = "role";
             role.Visible = true;
-            role.VisibleIndex = 4;
-            // 
-            // matKhau
-            // 
-            matKhau.Caption = "Mật khẩu";
-            matKhau.FieldName = "matKhau";
-            matKhau.Name = "matKhau";
-            matKhau.Visible = true;
-            matKhau.VisibleIndex = 2;
+            role.VisibleIndex = 3;
             // 
             // UC_TaiKhoan
             // 
@@ -232,6 +244,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn taiKhoan;
         private DevExpress.XtraGrid.Columns.GridColumn hoTen;
         private DevExpress.XtraGrid.Columns.GridColumn role;
-        private DevExpress.XtraGrid.Columns.GridColumn matKhau;
     }
 }

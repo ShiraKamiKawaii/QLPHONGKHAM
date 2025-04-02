@@ -37,6 +37,7 @@ namespace QLPHONGKHAM.UI
             };
             _tk.Add(tk);
             this.Close();
+            MessageBox.Show("Thêm tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private bool ValidateInput()
         {
@@ -63,7 +64,21 @@ namespace QLPHONGKHAM.UI
         {
             txtTaiKhoan.Text = txtTaiKhoan.Text.Trim();
             txtMatKhau.Text = txtMatKhau.Text.Trim();
-            txtHoTen.Text = txtHoTen.Text.Trim();
+            txtHoTen.Text = FormatName(txtHoTen.Text);
+            role.Text = role.Text.Trim();
+        }
+        private string FormatName(string name)
+        {
+            name = System.Text.RegularExpressions.Regex.Replace(name.Trim(), @"\s+", " "); // Loại bỏ khoảng trắng thừa giữa các từ
+            string[] words = name.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (words[i].Length > 0)
+                {
+                    words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
+                }
+            }
+            return string.Join(" ", words);
         }
     }
 }

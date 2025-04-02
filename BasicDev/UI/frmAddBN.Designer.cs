@@ -156,6 +156,7 @@
             // txtdienThoai
             // 
             tbBN.SetColumn(txtdienThoai, 1);
+            txtdienThoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtdienThoai.Location = new System.Drawing.Point(103, 180);
             txtdienThoai.Name = "txtdienThoai";
             tbBN.SetRow(txtdienThoai, 4);
@@ -184,6 +185,7 @@
             btnSaveBN.Appearance.Options.UseBorderColor = true;
             btnSaveBN.Appearance.Options.UseFont = true;
             tbBN.SetColumn(btnSaveBN, 1);
+            btnSaveBN.Cursor = System.Windows.Forms.Cursors.Hand;
             btnSaveBN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSaveBN.ImageOptions.Image");
             btnSaveBN.Location = new System.Drawing.Point(103, 276);
             btnSaveBN.Name = "btnSaveBN";
@@ -196,6 +198,7 @@
             // txtdiaChi
             // 
             tbBN.SetColumn(txtdiaChi, 1);
+            txtdiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtdiaChi.Location = new System.Drawing.Point(103, 140);
             txtdiaChi.Name = "txtdiaChi";
             tbBN.SetRow(txtdiaChi, 3);
@@ -205,6 +208,7 @@
             // txtsoCCCD
             // 
             tbBN.SetColumn(txtsoCCCD, 1);
+            txtsoCCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtsoCCCD.Location = new System.Drawing.Point(103, 220);
             txtsoCCCD.Name = "txtsoCCCD";
             tbBN.SetRow(txtsoCCCD, 5);
@@ -214,6 +218,7 @@
             // txthoTenBN
             // 
             tbBN.SetColumn(txthoTenBN, 1);
+            txthoTenBN.Cursor = System.Windows.Forms.Cursors.IBeam;
             txthoTenBN.Location = new System.Drawing.Point(103, 20);
             txthoTenBN.Name = "txthoTenBN";
             tbBN.SetRow(txthoTenBN, 0);

@@ -145,6 +145,7 @@
             btnSavePK.Appearance.Options.UseBorderColor = true;
             btnSavePK.Appearance.Options.UseFont = true;
             tablePanel1.SetColumn(btnSavePK, 1);
+            btnSavePK.Cursor = System.Windows.Forms.Cursors.Hand;
             btnSavePK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSavePK.ImageOptions.Image");
             btnSavePK.Location = new System.Drawing.Point(135, 539);
             btnSavePK.Name = "btnSavePK";
@@ -227,6 +228,7 @@
             // txtNoiDung
             // 
             tablePanel1.SetColumn(txtNoiDung, 1);
+            txtNoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             txtNoiDung.Location = new System.Drawing.Point(135, 363);
             txtNoiDung.Name = "txtNoiDung";
@@ -238,6 +240,7 @@
             // txtChuanDoan
             // 
             tablePanel1.SetColumn(txtChuanDoan, 1);
+            txtChuanDoan.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtChuanDoan.Location = new System.Drawing.Point(135, 331);
             txtChuanDoan.Name = "txtChuanDoan";
             tablePanel1.SetRow(txtChuanDoan, 8);
@@ -257,6 +260,7 @@
             // txtDienThoai
             // 
             tablePanel1.SetColumn(txtDienThoai, 1);
+            txtDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtDienThoai.Location = new System.Drawing.Point(135, 253);
             txtDienThoai.Name = "txtDienThoai";
             tablePanel1.SetRow(txtDienThoai, 6);
@@ -266,6 +270,7 @@
             // txtDiaChi
             // 
             tablePanel1.SetColumn(txtDiaChi, 1);
+            txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtDiaChi.Location = new System.Drawing.Point(135, 214);
             txtDiaChi.Name = "txtDiaChi";
             tablePanel1.SetRow(txtDiaChi, 5);
@@ -275,6 +280,7 @@
             // txtHoTenBN
             // 
             tablePanel1.SetColumn(txtHoTenBN, 1);
+            txtHoTenBN.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtHoTenBN.Location = new System.Drawing.Point(135, 97);
             txtHoTenBN.Name = "txtHoTenBN";
             tablePanel1.SetRow(txtHoTenBN, 2);

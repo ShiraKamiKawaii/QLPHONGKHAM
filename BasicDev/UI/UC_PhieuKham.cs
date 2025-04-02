@@ -12,6 +12,8 @@ using BusinessLayer;
 using DevExpress.CodeParser;
 using System.Data.Entity;
 using DataLayer;
+using QLPHONGKHAM.Report;
+using DevExpress.XtraReports.UI;
 
 namespace QLPHONGKHAM.UI
 {
@@ -50,7 +52,6 @@ namespace QLPHONGKHAM.UI
         }
         private void btnAddPK_Click(object sender, EventArgs e)
         {
-            _pk = new PHIEUKHAM();
             frmAddPK frmAdd = new frmAddPK();
             frmAdd.FormClosed += (s, args) => LoadData();
             ResetValue();
@@ -59,11 +60,10 @@ namespace QLPHONGKHAM.UI
 
         private void btnEditPK_Click(object sender, EventArgs e)
         {
-            _pk = new PHIEUKHAM();
             _id = gv_DanhSach.GetFocusedRowCellValue(maPK).ToString();
             var pk = _pk.getItem(int.Parse(_id));
             frmUpdatePK frmPK = new frmUpdatePK(pk);
-            frmPK.FormClosed += (s, args) => LoadData();
+            frmPK.FormClosed += (s, args) => Reload();
             ResetValue();
             frmPK.ShowDialog();
         }
@@ -104,9 +104,19 @@ namespace QLPHONGKHAM.UI
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnInPK_Click(object sender, EventArgs e)
         {
-
+            if (gv_DanhSach.RowCount > 0)
+            {
+                _id = gv_DanhSach.GetFocusedRowCellValue(maPK).ToString();
+                var pk = _pk.getItem(int.Parse(_id));
+                ReportPK rptPK = new ReportPK(pk);
+                rptPK.ShowRibbonPreview();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn phiếu khám để in", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
     }
 }

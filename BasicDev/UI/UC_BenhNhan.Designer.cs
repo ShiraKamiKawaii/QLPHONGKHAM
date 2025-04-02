@@ -44,6 +44,7 @@
             btnAddBN = new DevExpress.XtraEditors.SimpleButton();
             btnEditBN = new DevExpress.XtraEditors.SimpleButton();
             btnDelBN = new DevExpress.XtraEditors.SimpleButton();
+            searchControl1 = new DevExpress.XtraEditors.SearchControl();
             layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)gv_DanhSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)stackPanel1).BeginInit();
             stackPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)searchControl1.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem3).BeginInit();
@@ -171,6 +173,10 @@
             // 
             // maBN
             // 
+            maBN.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            maBN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            maBN.AppearanceHeader.Options.UseBackColor = true;
+            maBN.AppearanceHeader.Options.UseFont = true;
             maBN.Caption = "Mã bệnh nhân";
             maBN.FieldName = "maBN";
             maBN.Name = "maBN";
@@ -179,6 +185,10 @@
             // 
             // hoTenBN
             // 
+            hoTenBN.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            hoTenBN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            hoTenBN.AppearanceHeader.Options.UseBackColor = true;
+            hoTenBN.AppearanceHeader.Options.UseFont = true;
             hoTenBN.Caption = "Họ và tên";
             hoTenBN.FieldName = "hoTenBN";
             hoTenBN.Name = "hoTenBN";
@@ -187,6 +197,10 @@
             // 
             // ngaySinh
             // 
+            ngaySinh.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            ngaySinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            ngaySinh.AppearanceHeader.Options.UseBackColor = true;
+            ngaySinh.AppearanceHeader.Options.UseFont = true;
             ngaySinh.Caption = "Ngày sinh";
             ngaySinh.FieldName = "ngaySinh";
             ngaySinh.Name = "ngaySinh";
@@ -195,6 +209,10 @@
             // 
             // gioiTinh
             // 
+            gioiTinh.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            gioiTinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            gioiTinh.AppearanceHeader.Options.UseBackColor = true;
+            gioiTinh.AppearanceHeader.Options.UseFont = true;
             gioiTinh.Caption = "Giới Tính";
             gioiTinh.FieldName = "gioiTinh";
             gioiTinh.Name = "gioiTinh";
@@ -203,6 +221,10 @@
             // 
             // diaChi
             // 
+            diaChi.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            diaChi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            diaChi.AppearanceHeader.Options.UseBackColor = true;
+            diaChi.AppearanceHeader.Options.UseFont = true;
             diaChi.Caption = "Địa chỉ";
             diaChi.FieldName = "diaChi";
             diaChi.Name = "diaChi";
@@ -211,6 +233,10 @@
             // 
             // dienThoai
             // 
+            dienThoai.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            dienThoai.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            dienThoai.AppearanceHeader.Options.UseBackColor = true;
+            dienThoai.AppearanceHeader.Options.UseFont = true;
             dienThoai.Caption = "Điện thoại";
             dienThoai.FieldName = "dienThoai";
             dienThoai.Name = "dienThoai";
@@ -219,6 +245,10 @@
             // 
             // CCCD
             // 
+            CCCD.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            CCCD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            CCCD.AppearanceHeader.Options.UseBackColor = true;
+            CCCD.AppearanceHeader.Options.UseFont = true;
             CCCD.Caption = "Số CCCD";
             CCCD.FieldName = "CCCD";
             CCCD.Name = "CCCD";
@@ -230,6 +260,7 @@
             stackPanel1.Controls.Add(btnAddBN);
             stackPanel1.Controls.Add(btnEditBN);
             stackPanel1.Controls.Add(btnDelBN);
+            stackPanel1.Controls.Add(searchControl1);
             stackPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             stackPanel1.Location = new System.Drawing.Point(0, 531);
             stackPanel1.Name = "stackPanel1";
@@ -239,12 +270,15 @@
             // 
             // btnAddBN
             // 
+            btnAddBN.AllowFocus = false;
             btnAddBN.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnAddBN.Appearance.Options.UseFont = true;
+            btnAddBN.Cursor = System.Windows.Forms.Cursors.Hand;
             btnAddBN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnAddBN.ImageOptions.Image");
             btnAddBN.Location = new System.Drawing.Point(14, 10);
             btnAddBN.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             btnAddBN.Name = "btnAddBN";
+            btnAddBN.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             btnAddBN.Size = new System.Drawing.Size(103, 44);
             btnAddBN.TabIndex = 2;
             btnAddBN.Text = "Thêm";
@@ -252,12 +286,15 @@
             // 
             // btnEditBN
             // 
+            btnEditBN.AllowFocus = false;
             btnEditBN.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnEditBN.Appearance.Options.UseFont = true;
+            btnEditBN.Cursor = System.Windows.Forms.Cursors.Hand;
             btnEditBN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnEditBN.ImageOptions.Image");
             btnEditBN.Location = new System.Drawing.Point(170, 10);
             btnEditBN.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             btnEditBN.Name = "btnEditBN";
+            btnEditBN.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             btnEditBN.Size = new System.Drawing.Size(103, 44);
             btnEditBN.TabIndex = 1;
             btnEditBN.Text = "Sửa";
@@ -265,15 +302,32 @@
             // 
             // btnDelBN
             // 
+            btnDelBN.AllowFocus = false;
             btnDelBN.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             btnDelBN.Appearance.Options.UseFont = true;
+            btnDelBN.Cursor = System.Windows.Forms.Cursors.Hand;
             btnDelBN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnDelBN.ImageOptions.Image");
             btnDelBN.Location = new System.Drawing.Point(325, 10);
             btnDelBN.Name = "btnDelBN";
+            btnDelBN.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             btnDelBN.Size = new System.Drawing.Size(103, 44);
             btnDelBN.TabIndex = 0;
             btnDelBN.Text = "Xóa";
             btnDelBN.Click += btnDelBN_Click;
+            // 
+            // searchControl1
+            // 
+            searchControl1.Client = gc_DanhSach;
+            searchControl1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            searchControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            searchControl1.Location = new System.Drawing.Point(580, 17);
+            searchControl1.Margin = new System.Windows.Forms.Padding(150, 3, 3, 3);
+            searchControl1.Name = "searchControl1";
+            searchControl1.Properties.AutoHeight = false;
+            searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Repository.ClearButton(), new DevExpress.XtraEditors.Repository.SearchButton() });
+            searchControl1.Properties.Client = gc_DanhSach;
+            searchControl1.Size = new System.Drawing.Size(318, 30);
+            searchControl1.TabIndex = 3;
             // 
             // layoutControlGroup1
             // 
@@ -415,16 +469,18 @@
             // 
             // radioNu
             // 
+            radioNu.Enabled = false;
             radioNu.Location = new System.Drawing.Point(175, 2);
             radioNu.Name = "radioNu";
             radioNu.Size = new System.Drawing.Size(170, 25);
             radioNu.TabIndex = 2;
-            radioNu.TabStop = true;
             radioNu.Text = "Nữ";
             radioNu.UseVisualStyleBackColor = true;
             // 
             // radioNam
             // 
+            radioNam.Checked = true;
+            radioNam.Enabled = false;
             radioNam.Location = new System.Drawing.Point(2, 2);
             radioNam.Name = "radioNam";
             radioNam.Size = new System.Drawing.Size(169, 25);
@@ -561,6 +617,7 @@
             // 
             tablePanel1.SetColumn(dateNgaySinh, 1);
             dateNgaySinh.CustomFormat = "dd/MM/yyyy";
+            dateNgaySinh.Enabled = false;
             dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             dateNgaySinh.Location = new System.Drawing.Point(140, 135);
             dateNgaySinh.Name = "dateNgaySinh";
@@ -573,6 +630,7 @@
             tablePanel1.SetColumn(txtCCCD, 3);
             txtCCCD.Location = new System.Drawing.Point(630, 97);
             txtCCCD.Name = "txtCCCD";
+            txtCCCD.Properties.ReadOnly = true;
             tablePanel1.SetRow(txtCCCD, 2);
             txtCCCD.Size = new System.Drawing.Size(347, 20);
             txtCCCD.TabIndex = 4;
@@ -582,6 +640,7 @@
             tablePanel1.SetColumn(txtDienThoai, 3);
             txtDienThoai.Location = new System.Drawing.Point(630, 58);
             txtDienThoai.Name = "txtDienThoai";
+            txtDienThoai.Properties.ReadOnly = true;
             tablePanel1.SetRow(txtDienThoai, 1);
             txtDienThoai.Size = new System.Drawing.Size(347, 20);
             txtDienThoai.TabIndex = 3;
@@ -591,6 +650,7 @@
             tablePanel1.SetColumn(txtHoTenBN, 1);
             txtHoTenBN.Location = new System.Drawing.Point(140, 58);
             txtHoTenBN.Name = "txtHoTenBN";
+            txtHoTenBN.Properties.ReadOnly = true;
             tablePanel1.SetRow(txtHoTenBN, 1);
             txtHoTenBN.Size = new System.Drawing.Size(347, 20);
             txtHoTenBN.TabIndex = 2;
@@ -600,6 +660,7 @@
             tablePanel1.SetColumn(txtDiaChi, 3);
             txtDiaChi.Location = new System.Drawing.Point(630, 19);
             txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Properties.ReadOnly = true;
             tablePanel1.SetRow(txtDiaChi, 0);
             txtDiaChi.Size = new System.Drawing.Size(347, 20);
             txtDiaChi.TabIndex = 1;
@@ -609,6 +670,7 @@
             tablePanel1.SetColumn(txtMaBN, 1);
             txtMaBN.Location = new System.Drawing.Point(140, 19);
             txtMaBN.Name = "txtMaBN";
+            txtMaBN.Properties.ReadOnly = true;
             tablePanel1.SetRow(txtMaBN, 0);
             txtMaBN.Size = new System.Drawing.Size(347, 20);
             txtMaBN.TabIndex = 0;
@@ -694,6 +756,7 @@
             ((System.ComponentModel.ISupportInitialize)gv_DanhSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)stackPanel1).EndInit();
             stackPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)searchControl1.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem3).EndInit();
@@ -789,5 +852,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.SearchControl searchControl1;
     }
 }
