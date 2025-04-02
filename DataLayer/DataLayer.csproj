@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9E9C89D8-9532-485D-80E0-CE0D02FCE833}</ProjectGuid>
+    <ProjectGuid>{62A3D241-C75C-4E51-91C2-80DC3771B4CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataLayer</RootNamespace>
@@ -54,52 +54,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BenhNhan.cs">
-      <DependentUpon>QLPHONGKHAM.tt</DependentUpon>
+      <DependentUpon>QLPHONGKHAMDONGY.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuKham.cs">
-      <DependentUpon>QLPHONGKHAM.tt</DependentUpon>
+      <DependentUpon>QLPHONGKHAMDONGY.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLPHONGKHAM.Context.cs">
+    <Compile Include="QLPHONGKHAMDONGY.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLPHONGKHAM.Context.tt</DependentUpon>
+      <DependentUpon>QLPHONGKHAMDONGY.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLPHONGKHAM.cs">
+    <Compile Include="QLPHONGKHAMDONGY.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLPHONGKHAM.tt</DependentUpon>
+      <DependentUpon>QLPHONGKHAMDONGY.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLPHONGKHAM.Designer.cs">
+    <Compile Include="QLPHONGKHAMDONGY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLPHONGKHAM.edmx</DependentUpon>
+      <DependentUpon>QLPHONGKHAMDONGY.edmx</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
-      <DependentUpon>QLPHONGKHAM.tt</DependentUpon>
+      <DependentUpon>QLPHONGKHAMDONGY.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="QLPHONGKHAM.edmx">
+    <EntityDeploy Include="QLPHONGKHAMDONGY.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLPHONGKHAM.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLPHONGKHAMDONGY.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="QLPHONGKHAM.edmx.diagram">
-      <DependentUpon>QLPHONGKHAM.edmx</DependentUpon>
+    <None Include="QLPHONGKHAMDONGY.edmx.diagram">
+      <DependentUpon>QLPHONGKHAMDONGY.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QLPHONGKHAM.Context.tt">
+    <Content Include="QLPHONGKHAMDONGY.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLPHONGKHAM.edmx</DependentUpon>
-      <LastGenOutput>QLPHONGKHAM.Context.cs</LastGenOutput>
+      <DependentUpon>QLPHONGKHAMDONGY.edmx</DependentUpon>
+      <LastGenOutput>QLPHONGKHAMDONGY.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="QLPHONGKHAM.tt">
+    <Content Include="QLPHONGKHAMDONGY.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLPHONGKHAM.edmx</DependentUpon>
-      <LastGenOutput>QLPHONGKHAM.cs</LastGenOutput>
+      <DependentUpon>QLPHONGKHAMDONGY.edmx</DependentUpon>
+      <LastGenOutput>QLPHONGKHAMDONGY.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

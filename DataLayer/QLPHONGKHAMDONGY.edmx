@@ -21,7 +21,7 @@
           <Key>
             <PropertyRef Name="maPK" />
           </Key>
-          <Property Name="maPK" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="maPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="maBN" Type="nchar" MaxLength="14" Nullable="false" />
           <Property Name="hoTenBN" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="ngaySinh" Type="date" Nullable="false" />
@@ -36,7 +36,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="taiKhoan" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="matKhau" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="hoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="role" Type="nchar" MaxLength="10" Nullable="false" />
@@ -84,7 +85,7 @@
           <Key>
             <PropertyRef Name="maPK" />
           </Key>
-          <Property Name="maPK" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="maPK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="maBN" Type="String" MaxLength="14" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="hoTenBN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ngaySinh" Type="DateTime" Nullable="false" Precision="0" />
@@ -100,7 +101,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="taiKhoan" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="matKhau" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="hoTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="role" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
@@ -165,6 +167,7 @@
             <EntityTypeMapping TypeName="qlPhongKhamDongYModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="taiKhoan" ColumnName="taiKhoan" />
                 <ScalarProperty Name="matKhau" ColumnName="matKhau" />
                 <ScalarProperty Name="hoTen" ColumnName="hoTen" />
                 <ScalarProperty Name="role" ColumnName="role" />

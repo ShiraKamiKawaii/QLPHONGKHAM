@@ -18,7 +18,7 @@ namespace QLPHONGKHAM.UI
         public frmUpdatePK(PhieuKham pk)
 		{
             InitializeComponent();
-            txtMaPK.Text = pk.maPK;
+            txtMaPK.Text = pk.maPK.ToString();
             txtMaBN.Text = pk.maBN;
             txtHoTenBN.Text = pk.hoTenBN;
             dateNgaySinh.Value = pk.ngaySinh;

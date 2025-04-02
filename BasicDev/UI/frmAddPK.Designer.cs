@@ -46,7 +46,6 @@
             txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             txtHoTenBN = new DevExpress.XtraEditors.TextEdit();
             txtMaBN = new DevExpress.XtraEditors.TextEdit();
-            txtMaPK = new DevExpress.XtraEditors.TextEdit();
             labelControl10 = new DevExpress.XtraEditors.LabelControl();
             labelControl9 = new DevExpress.XtraEditors.LabelControl();
             labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -56,7 +55,6 @@
             labelControl4 = new DevExpress.XtraEditors.LabelControl();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            labelControl1 = new DevExpress.XtraEditors.LabelControl();
             label1 = new System.Windows.Forms.Label();
             Root = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -76,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)txtDiaChi.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtHoTenBN.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtMaBN.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txtMaPK.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem2).BeginInit();
@@ -108,7 +105,6 @@
             tablePanel1.Controls.Add(txtDiaChi);
             tablePanel1.Controls.Add(txtHoTenBN);
             tablePanel1.Controls.Add(txtMaBN);
-            tablePanel1.Controls.Add(txtMaPK);
             tablePanel1.Controls.Add(labelControl10);
             tablePanel1.Controls.Add(labelControl9);
             tablePanel1.Controls.Add(labelControl8);
@@ -118,10 +114,9 @@
             tablePanel1.Controls.Add(labelControl4);
             tablePanel1.Controls.Add(labelControl3);
             tablePanel1.Controls.Add(labelControl2);
-            tablePanel1.Controls.Add(labelControl1);
             tablePanel1.Location = new System.Drawing.Point(12, 51);
             tablePanel1.Name = "tablePanel1";
-            tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 176F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F) });
+            tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 39F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 176F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F) });
             tablePanel1.Size = new System.Drawing.Size(563, 590);
             tablePanel1.TabIndex = 6;
             tablePanel1.UseSkinIndents = true;
@@ -137,9 +132,9 @@
             btnSavePK.Appearance.Options.UseFont = true;
             tablePanel1.SetColumn(btnSavePK, 1);
             btnSavePK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSavePK.ImageOptions.Image");
-            btnSavePK.Location = new System.Drawing.Point(135, 539);
+            btnSavePK.Location = new System.Drawing.Point(135, 519);
             btnSavePK.Name = "btnSavePK";
-            tablePanel1.SetRow(btnSavePK, 10);
+            tablePanel1.SetRow(btnSavePK, 9);
             btnSavePK.Size = new System.Drawing.Size(415, 38);
             btnSavePK.TabIndex = 20;
             btnSavePK.Text = "Lưu";
@@ -150,10 +145,10 @@
             tablePanel1.SetColumn(layoutControl2, 1);
             layoutControl2.Controls.Add(radioNu);
             layoutControl2.Controls.Add(radioNam);
-            layoutControl2.Location = new System.Drawing.Point(135, 168);
+            layoutControl2.Location = new System.Drawing.Point(135, 129);
             layoutControl2.Name = "layoutControl2";
             layoutControl2.Root = layoutControlGroup3;
-            tablePanel1.SetRow(layoutControl2, 4);
+            tablePanel1.SetRow(layoutControl2, 3);
             layoutControl2.Size = new System.Drawing.Size(415, 35);
             layoutControl2.TabIndex = 19;
             layoutControl2.Text = "layoutControl2";
@@ -208,9 +203,9 @@
             tablePanel1.SetColumn(dateNgaySinh, 1);
             dateNgaySinh.CustomFormat = "dd/MM/yyyy";
             dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            dateNgaySinh.Location = new System.Drawing.Point(135, 136);
+            dateNgaySinh.Location = new System.Drawing.Point(135, 97);
             dateNgaySinh.Name = "dateNgaySinh";
-            tablePanel1.SetRow(dateNgaySinh, 3);
+            tablePanel1.SetRow(dateNgaySinh, 2);
             dateNgaySinh.Size = new System.Drawing.Size(415, 21);
             dateNgaySinh.TabIndex = 18;
             // 
@@ -218,9 +213,9 @@
             // 
             tablePanel1.SetColumn(txtNoiDung, 1);
             txtNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            txtNoiDung.Location = new System.Drawing.Point(135, 363);
+            txtNoiDung.Location = new System.Drawing.Point(135, 324);
             txtNoiDung.Name = "txtNoiDung";
-            tablePanel1.SetRow(txtNoiDung, 9);
+            tablePanel1.SetRow(txtNoiDung, 8);
             txtNoiDung.Size = new System.Drawing.Size(415, 172);
             txtNoiDung.TabIndex = 17;
             txtNoiDung.Text = "";
@@ -228,18 +223,18 @@
             // txtChuanDoan
             // 
             tablePanel1.SetColumn(txtChuanDoan, 1);
-            txtChuanDoan.Location = new System.Drawing.Point(135, 331);
+            txtChuanDoan.Location = new System.Drawing.Point(135, 292);
             txtChuanDoan.Name = "txtChuanDoan";
-            tablePanel1.SetRow(txtChuanDoan, 8);
+            tablePanel1.SetRow(txtChuanDoan, 7);
             txtChuanDoan.Size = new System.Drawing.Size(415, 20);
             txtChuanDoan.TabIndex = 16;
             // 
             // txtCCCD
             // 
             tablePanel1.SetColumn(txtCCCD, 1);
-            txtCCCD.Location = new System.Drawing.Point(135, 292);
+            txtCCCD.Location = new System.Drawing.Point(135, 253);
             txtCCCD.Name = "txtCCCD";
-            tablePanel1.SetRow(txtCCCD, 7);
+            tablePanel1.SetRow(txtCCCD, 6);
             txtCCCD.Size = new System.Drawing.Size(415, 20);
             txtCCCD.TabIndex = 15;
             txtCCCD.TextChanged += txtCCCD_TextChanged;
@@ -247,27 +242,27 @@
             // txtDienThoai
             // 
             tablePanel1.SetColumn(txtDienThoai, 1);
-            txtDienThoai.Location = new System.Drawing.Point(135, 253);
+            txtDienThoai.Location = new System.Drawing.Point(135, 214);
             txtDienThoai.Name = "txtDienThoai";
-            tablePanel1.SetRow(txtDienThoai, 6);
+            tablePanel1.SetRow(txtDienThoai, 5);
             txtDienThoai.Size = new System.Drawing.Size(415, 20);
             txtDienThoai.TabIndex = 14;
             // 
             // txtDiaChi
             // 
             tablePanel1.SetColumn(txtDiaChi, 1);
-            txtDiaChi.Location = new System.Drawing.Point(135, 214);
+            txtDiaChi.Location = new System.Drawing.Point(135, 175);
             txtDiaChi.Name = "txtDiaChi";
-            tablePanel1.SetRow(txtDiaChi, 5);
+            tablePanel1.SetRow(txtDiaChi, 4);
             txtDiaChi.Size = new System.Drawing.Size(415, 20);
             txtDiaChi.TabIndex = 13;
             // 
             // txtHoTenBN
             // 
             tablePanel1.SetColumn(txtHoTenBN, 1);
-            txtHoTenBN.Location = new System.Drawing.Point(135, 97);
+            txtHoTenBN.Location = new System.Drawing.Point(135, 58);
             txtHoTenBN.Name = "txtHoTenBN";
-            tablePanel1.SetRow(txtHoTenBN, 2);
+            tablePanel1.SetRow(txtHoTenBN, 1);
             txtHoTenBN.Size = new System.Drawing.Size(415, 20);
             txtHoTenBN.TabIndex = 12;
             // 
@@ -275,31 +270,20 @@
             // 
             tablePanel1.SetColumn(txtMaBN, 1);
             txtMaBN.Enabled = false;
-            txtMaBN.Location = new System.Drawing.Point(135, 58);
+            txtMaBN.Location = new System.Drawing.Point(135, 19);
             txtMaBN.Name = "txtMaBN";
-            tablePanel1.SetRow(txtMaBN, 1);
+            tablePanel1.SetRow(txtMaBN, 0);
             txtMaBN.Size = new System.Drawing.Size(415, 20);
             txtMaBN.TabIndex = 11;
-            // 
-            // txtMaPK
-            // 
-            tablePanel1.SetColumn(txtMaPK, 1);
-            txtMaPK.Enabled = false;
-            txtMaPK.Location = new System.Drawing.Point(135, 19);
-            txtMaPK.Name = "txtMaPK";
-            txtMaPK.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            tablePanel1.SetRow(txtMaPK, 0);
-            txtMaPK.Size = new System.Drawing.Size(415, 20);
-            txtMaPK.TabIndex = 10;
             // 
             // labelControl10
             // 
             labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             tablePanel1.SetColumn(labelControl10, 0);
             labelControl10.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl10.Location = new System.Drawing.Point(13, 363);
+            labelControl10.Location = new System.Drawing.Point(13, 324);
             labelControl10.Name = "labelControl10";
-            tablePanel1.SetRow(labelControl10, 9);
+            tablePanel1.SetRow(labelControl10, 8);
             labelControl10.Size = new System.Drawing.Size(118, 172);
             labelControl10.TabIndex = 9;
             labelControl10.Text = "Nội dung";
@@ -308,9 +292,9 @@
             // 
             tablePanel1.SetColumn(labelControl9, 0);
             labelControl9.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl9.Location = new System.Drawing.Point(13, 324);
+            labelControl9.Location = new System.Drawing.Point(13, 285);
             labelControl9.Name = "labelControl9";
-            tablePanel1.SetRow(labelControl9, 8);
+            tablePanel1.SetRow(labelControl9, 7);
             labelControl9.Size = new System.Drawing.Size(118, 35);
             labelControl9.TabIndex = 8;
             labelControl9.Text = "Chuẩn đoán";
@@ -319,9 +303,9 @@
             // 
             tablePanel1.SetColumn(labelControl8, 0);
             labelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl8.Location = new System.Drawing.Point(13, 285);
+            labelControl8.Location = new System.Drawing.Point(13, 246);
             labelControl8.Name = "labelControl8";
-            tablePanel1.SetRow(labelControl8, 7);
+            tablePanel1.SetRow(labelControl8, 6);
             labelControl8.Size = new System.Drawing.Size(118, 35);
             labelControl8.TabIndex = 7;
             labelControl8.Text = "CCCD";
@@ -330,9 +314,9 @@
             // 
             tablePanel1.SetColumn(labelControl7, 0);
             labelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl7.Location = new System.Drawing.Point(13, 246);
+            labelControl7.Location = new System.Drawing.Point(13, 207);
             labelControl7.Name = "labelControl7";
-            tablePanel1.SetRow(labelControl7, 6);
+            tablePanel1.SetRow(labelControl7, 5);
             labelControl7.Size = new System.Drawing.Size(118, 35);
             labelControl7.TabIndex = 6;
             labelControl7.Text = "Điện thoại";
@@ -341,9 +325,9 @@
             // 
             tablePanel1.SetColumn(labelControl6, 0);
             labelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl6.Location = new System.Drawing.Point(13, 207);
+            labelControl6.Location = new System.Drawing.Point(13, 168);
             labelControl6.Name = "labelControl6";
-            tablePanel1.SetRow(labelControl6, 5);
+            tablePanel1.SetRow(labelControl6, 4);
             labelControl6.Size = new System.Drawing.Size(118, 35);
             labelControl6.TabIndex = 5;
             labelControl6.Text = "Địa chỉ";
@@ -352,9 +336,9 @@
             // 
             tablePanel1.SetColumn(labelControl5, 0);
             labelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl5.Location = new System.Drawing.Point(13, 168);
+            labelControl5.Location = new System.Drawing.Point(13, 129);
             labelControl5.Name = "labelControl5";
-            tablePanel1.SetRow(labelControl5, 4);
+            tablePanel1.SetRow(labelControl5, 3);
             labelControl5.Size = new System.Drawing.Size(118, 35);
             labelControl5.TabIndex = 4;
             labelControl5.Text = "Giới tính";
@@ -363,9 +347,9 @@
             // 
             tablePanel1.SetColumn(labelControl4, 0);
             labelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl4.Location = new System.Drawing.Point(13, 129);
+            labelControl4.Location = new System.Drawing.Point(13, 90);
             labelControl4.Name = "labelControl4";
-            tablePanel1.SetRow(labelControl4, 3);
+            tablePanel1.SetRow(labelControl4, 2);
             labelControl4.Size = new System.Drawing.Size(118, 35);
             labelControl4.TabIndex = 3;
             labelControl4.Text = "Ngày sinh";
@@ -374,9 +358,9 @@
             // 
             tablePanel1.SetColumn(labelControl3, 0);
             labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl3.Location = new System.Drawing.Point(13, 90);
+            labelControl3.Location = new System.Drawing.Point(13, 51);
             labelControl3.Name = "labelControl3";
-            tablePanel1.SetRow(labelControl3, 2);
+            tablePanel1.SetRow(labelControl3, 1);
             labelControl3.Size = new System.Drawing.Size(118, 35);
             labelControl3.TabIndex = 2;
             labelControl3.Text = "Họ và tên";
@@ -385,23 +369,12 @@
             // 
             tablePanel1.SetColumn(labelControl2, 0);
             labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl2.Location = new System.Drawing.Point(13, 51);
+            labelControl2.Location = new System.Drawing.Point(13, 12);
             labelControl2.Name = "labelControl2";
-            tablePanel1.SetRow(labelControl2, 1);
+            tablePanel1.SetRow(labelControl2, 0);
             labelControl2.Size = new System.Drawing.Size(118, 35);
             labelControl2.TabIndex = 1;
             labelControl2.Text = "Mã bệnh nhân";
-            // 
-            // labelControl1
-            // 
-            tablePanel1.SetColumn(labelControl1, 0);
-            labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelControl1.Location = new System.Drawing.Point(13, 12);
-            labelControl1.Name = "labelControl1";
-            tablePanel1.SetRow(labelControl1, 0);
-            labelControl1.Size = new System.Drawing.Size(118, 35);
-            labelControl1.TabIndex = 0;
-            labelControl1.Text = "Mã phiếu khám";
             // 
             // label1
             // 
@@ -466,7 +439,6 @@
             ((System.ComponentModel.ISupportInitialize)txtDiaChi.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtHoTenBN.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtMaBN.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txtMaPK.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)Root).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem2).EndInit();
@@ -494,7 +466,6 @@
         private DevExpress.XtraEditors.TextEdit txtDiaChi;
         private DevExpress.XtraEditors.TextEdit txtHoTenBN;
         private DevExpress.XtraEditors.TextEdit txtMaBN;
-        private DevExpress.XtraEditors.TextEdit txtMaPK;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -504,7 +475,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.SimpleButton btnSavePK;
     }

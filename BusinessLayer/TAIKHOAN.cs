@@ -12,16 +12,16 @@ namespace BusinessLayer
         qlPhongKhamDongYEntities db = new qlPhongKhamDongYEntities();
         public List<TaiKhoan> getList()
         {
-            return db.TaiKhoans.ToList();
+            return db.TaiKhoan.ToList();
         }
-        public TaiKhoan getItem(string ID)
+        public TaiKhoan getItem(int ID)
         {
-            return db.TaiKhoans.FirstOrDefault(x => x.ID == ID);
+            return db.TaiKhoan.FirstOrDefault(x => x.ID == ID);
         }
         public TaiKhoan Add(TaiKhoan tk)
         {
 
-            db.TaiKhoans.Add(tk);
+            db.TaiKhoan.Add(tk);
             db.SaveChanges();
             return tk;
 
@@ -30,7 +30,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _tk = db.TaiKhoans.FirstOrDefault(x => x.ID == tk.ID);
+                var _tk = db.TaiKhoan.FirstOrDefault(x => x.ID == tk.ID);
                 _tk.ID = tk.ID;
                 _tk.hoTen = tk.hoTen;
                 _tk.matKhau = tk.matKhau;
@@ -43,12 +43,12 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + e.Message);
             }
         }
-        public void Delete(string ID)
+        public void Delete(int ID)
         {
             try
             {
-                var _tk = db.TaiKhoans.FirstOrDefault(x => x.ID == ID);
-                db.TaiKhoans.Remove(_tk);
+                var _tk = db.TaiKhoan.FirstOrDefault(x => x.ID == ID);
+                db.TaiKhoan.Remove(_tk);
                 db.SaveChanges();
             }
             catch (Exception e)
@@ -58,7 +58,7 @@ namespace BusinessLayer
         }
         public bool CheckLogin(TaiKhoan tk)
         {
-            var _tk = db.TaiKhoans.FirstOrDefault(x=>x.ID==tk.ID && x.matKhau==tk.matKhau);
+            var _tk = db.TaiKhoan.FirstOrDefault(x => x.taiKhoan == tk.taiKhoan && x.matKhau == tk.matKhau);
             return _tk != null;
         }
     }

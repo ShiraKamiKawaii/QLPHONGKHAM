@@ -14,7 +14,7 @@ namespace DataLayer
     
     public partial class PhieuKham
     {
-        public string maPK { get; set; }
+        public int maPK { get; set; }
         public string maBN { get; set; }
         public string hoTenBN { get; set; }
         public System.DateTime ngaySinh { get; set; }

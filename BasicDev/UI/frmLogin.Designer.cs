@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             btnLogin = new DevExpress.XtraEditors.SimpleButton();
-            txtID = new DevExpress.XtraEditors.TextEdit();
+            txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             btnCLose = new DevExpress.XtraEditors.SimpleButton();
             panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)txtID.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtTaiKhoan.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtMatKhau.Properties).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -63,13 +63,13 @@
             btnLogin.Text = "Đăng nhập";
             btnLogin.Click += btnLogin_Click;
             // 
-            // txtID
+            // txtTaiKhoan
             // 
-            txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtID.Location = new System.Drawing.Point(151, 70);
-            txtID.Name = "txtID";
-            txtID.Size = new System.Drawing.Size(180, 20);
-            txtID.TabIndex = 1;
+            txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtTaiKhoan.Location = new System.Drawing.Point(151, 70);
+            txtTaiKhoan.Name = "txtTaiKhoan";
+            txtTaiKhoan.Size = new System.Drawing.Size(180, 20);
+            txtTaiKhoan.TabIndex = 1;
             // 
             // txtMatKhau
             // 
@@ -133,7 +133,7 @@
             panel1.Controls.Add(labelControl1);
             panel1.Controls.Add(txtMatKhau);
             panel1.Controls.Add(labelControl2);
-            panel1.Controls.Add(txtID);
+            panel1.Controls.Add(txtTaiKhoan);
             panel1.Controls.Add(labelControl3);
             panel1.Controls.Add(btnLogin);
             panel1.Location = new System.Drawing.Point(58, 64);
@@ -157,7 +157,7 @@
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "frmLogin";
             Load += frmLogin_Load;
-            ((System.ComponentModel.ISupportInitialize)txtID.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtTaiKhoan.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtMatKhau.Properties).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -166,7 +166,7 @@
 
         #endregion
         private DevExpress.XtraEditors.SimpleButton btnLogin;
-        private DevExpress.XtraEditors.TextEdit txtID;
+        private DevExpress.XtraEditors.TextEdit txtTaiKhoan;
         private DevExpress.XtraEditors.TextEdit txtMatKhau;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;

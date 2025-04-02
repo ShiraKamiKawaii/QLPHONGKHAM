@@ -14,7 +14,8 @@ namespace DataLayer
     
     public partial class TaiKhoan
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
+        public string taiKhoan { get; set; }
         public string matKhau { get; set; }
         public string hoTen { get; set; }
         public string role { get; set; }

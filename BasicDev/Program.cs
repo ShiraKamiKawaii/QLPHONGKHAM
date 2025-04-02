@@ -18,10 +18,10 @@ namespace BasicDev {
             Application.SetCompatibleTextRenderingDefault(false);
             using(frmLogin frmLogin = new frmLogin())
             {
-                if(frmLogin.ShowDialog() == DialogResult.OK)
-                {
+               if(frmLogin.ShowDialog() == DialogResult.OK)
+               {
                     Application.Run(new frmMain());
-                }
+               }      
             };
         }
     }

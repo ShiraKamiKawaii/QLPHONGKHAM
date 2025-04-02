@@ -37,11 +37,11 @@ namespace QLPHONGKHAM.UI
         {
             TaiKhoan tk = new TaiKhoan()
             {
-                ID = txtID.Text,
+                taiKhoan=txtTaiKhoan.Text,
                 matKhau = txtMatKhau.Text
             };
             
-            if (string.IsNullOrWhiteSpace(txtID.Text) || string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text) || string.IsNullOrWhiteSpace(txtMatKhau.Text))
             {
                 MessageBox.Show("Tài khoản và mật khẩu không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); return;
             }

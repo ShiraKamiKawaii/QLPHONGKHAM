@@ -66,11 +66,11 @@ namespace BusinessLayer
         public void Check(string maBN)
         {
             var _checkbn = db.BenhNhan.FirstOrDefault(x => x.maBN == maBN);
-            if (_checkbn==null)
+            if (_checkbn == null)
             {
                 BENHNHAN _bn = new BENHNHAN();
             }
         }
-        
+
     }
 }

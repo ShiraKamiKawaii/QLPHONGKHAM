@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BusinessLayer;
+using QLPHONGKHAM.UI;
 
 namespace BasicDev.UI
 {
@@ -17,13 +19,47 @@ namespace BasicDev.UI
         {
             InitializeComponent();
         }
+        TAIKHOAN _tk;
+        string _id;
         public void Reload()
         {
-
+            LoadData();
+        }
+        private void LoadData()
+        {
+            gc_DanhSach.DataSource = _tk.getList();
         }
         private void UC_TaiKhoan_Load(object sender, EventArgs e)
         {
-            gc_DanhSach.DataSource = MyClass.GetData("SELECT * FROM TaiKhoan");
+            _tk = new TAIKHOAN();
+            LoadData();
+        }
+
+        private void btnThemTK_Click(object sender, EventArgs e)
+        {
+            _tk = new TAIKHOAN();
+            frmAddTK frmAdd = new frmAddTK();
+            frmAdd.FormClosed += (s, args) => LoadData();
+            frmAdd.ShowDialog();
+        }
+
+        private void btnSuaTK_Click(object sender, EventArgs e)
+        {
+            _tk = new TAIKHOAN();
+            _id = gv_DanhSach.GetFocusedRowCellValue(ID).ToString();
+            var tk = _tk.getItem(int.Parse(_id));
+            //frmUpdateBN frmBN = new frmUpdateBN(bn);
+            //frmBN.FormClosed += (s, args) => LoadData();
+            //frmBN.ShowDialog();
+        }
+
+        private void btnXoaTK_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                _tk.Delete(int.Parse(_id));
+                LoadData();
+            }
         }
     }
 }

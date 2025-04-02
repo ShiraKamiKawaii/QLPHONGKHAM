@@ -32,11 +32,16 @@
             panelControl1 = new DevExpress.XtraEditors.PanelControl();
             label1 = new System.Windows.Forms.Label();
             panel_button = new DevExpress.Utils.Layout.StackPanel();
-            btnThemBN = new DevExpress.XtraEditors.SimpleButton();
-            simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            btnThemTK = new DevExpress.XtraEditors.SimpleButton();
+            btnSuaTK = new DevExpress.XtraEditors.SimpleButton();
+            btnXoaTK = new DevExpress.XtraEditors.SimpleButton();
             gc_DanhSach = new DevExpress.XtraGrid.GridControl();
             gv_DanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            taiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
+            matKhau = new DevExpress.XtraGrid.Columns.GridColumn();
+            hoTen = new DevExpress.XtraGrid.Columns.GridColumn();
+            role = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
             panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)panel_button).BeginInit();
@@ -68,9 +73,9 @@
             // 
             // panel_button
             // 
-            panel_button.Controls.Add(btnThemBN);
-            panel_button.Controls.Add(simpleButton2);
-            panel_button.Controls.Add(simpleButton1);
+            panel_button.Controls.Add(btnThemTK);
+            panel_button.Controls.Add(btnSuaTK);
+            panel_button.Controls.Add(btnXoaTK);
             panel_button.Dock = System.Windows.Forms.DockStyle.Bottom;
             panel_button.Location = new System.Drawing.Point(0, 492);
             panel_button.Name = "panel_button";
@@ -78,46 +83,49 @@
             panel_button.TabIndex = 1;
             panel_button.UseSkinIndents = true;
             // 
-            // btnThemBN
+            // btnThemTK
             // 
-            btnThemBN.AllowFocus = false;
-            btnThemBN.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
-            btnThemBN.Appearance.Options.UseFont = true;
-            btnThemBN.AutoWidthInLayoutControl = true;
-            btnThemBN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnThemBN.ImageOptions.Image");
-            btnThemBN.Location = new System.Drawing.Point(14, 12);
-            btnThemBN.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            btnThemBN.Name = "btnThemBN";
-            btnThemBN.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            btnThemBN.ShowToolTips = false;
-            btnThemBN.Size = new System.Drawing.Size(92, 50);
-            btnThemBN.TabIndex = 2;
-            btnThemBN.Text = "Thêm ";
+            btnThemTK.AllowFocus = false;
+            btnThemTK.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            btnThemTK.Appearance.Options.UseFont = true;
+            btnThemTK.AutoWidthInLayoutControl = true;
+            btnThemTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnThemTK.ImageOptions.Image");
+            btnThemTK.Location = new System.Drawing.Point(14, 12);
+            btnThemTK.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            btnThemTK.Name = "btnThemTK";
+            btnThemTK.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            btnThemTK.ShowToolTips = false;
+            btnThemTK.Size = new System.Drawing.Size(92, 50);
+            btnThemTK.TabIndex = 2;
+            btnThemTK.Text = "Thêm ";
+            btnThemTK.Click += btnThemTK_Click;
             // 
-            // simpleButton2
+            // btnSuaTK
             // 
-            simpleButton2.AllowFocus = false;
-            simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
-            simpleButton2.Appearance.Options.UseFont = true;
-            simpleButton2.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton2.ImageOptions.Image");
-            simpleButton2.Location = new System.Drawing.Point(159, 12);
-            simpleButton2.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            simpleButton2.Name = "simpleButton2";
-            simpleButton2.Size = new System.Drawing.Size(92, 50);
-            simpleButton2.TabIndex = 1;
-            simpleButton2.Text = "Sửa";
+            btnSuaTK.AllowFocus = false;
+            btnSuaTK.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            btnSuaTK.Appearance.Options.UseFont = true;
+            btnSuaTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnSuaTK.ImageOptions.Image");
+            btnSuaTK.Location = new System.Drawing.Point(159, 12);
+            btnSuaTK.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            btnSuaTK.Name = "btnSuaTK";
+            btnSuaTK.Size = new System.Drawing.Size(92, 50);
+            btnSuaTK.TabIndex = 1;
+            btnSuaTK.Text = "Sửa";
+            btnSuaTK.Click += btnSuaTK_Click;
             // 
-            // simpleButton1
+            // btnXoaTK
             // 
-            simpleButton1.AllowFocus = false;
-            simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
-            simpleButton1.Appearance.Options.UseFont = true;
-            simpleButton1.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton1.ImageOptions.Image");
-            simpleButton1.Location = new System.Drawing.Point(303, 12);
-            simpleButton1.Name = "simpleButton1";
-            simpleButton1.Size = new System.Drawing.Size(92, 50);
-            simpleButton1.TabIndex = 0;
-            simpleButton1.Text = "Xóa";
+            btnXoaTK.AllowFocus = false;
+            btnXoaTK.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            btnXoaTK.Appearance.Options.UseFont = true;
+            btnXoaTK.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnXoaTK.ImageOptions.Image");
+            btnXoaTK.Location = new System.Drawing.Point(303, 12);
+            btnXoaTK.Name = "btnXoaTK";
+            btnXoaTK.Size = new System.Drawing.Size(92, 50);
+            btnXoaTK.TabIndex = 0;
+            btnXoaTK.Text = "Xóa";
+            btnXoaTK.Click += btnXoaTK_Click;
             // 
             // gc_DanhSach
             // 
@@ -141,6 +149,7 @@
             gv_DanhSach.Appearance.HeaderPanel.Options.UseForeColor = true;
             gv_DanhSach.AppearancePrint.HeaderPanel.BackColor = System.Drawing.Color.Lime;
             gv_DanhSach.AppearancePrint.HeaderPanel.Options.UseBackColor = true;
+            gv_DanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID, taiKhoan, matKhau, hoTen, role });
             gv_DanhSach.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             gv_DanhSach.GridControl = gc_DanhSach;
             gv_DanhSach.Name = "gv_DanhSach";
@@ -148,6 +157,46 @@
             gv_DanhSach.OptionsEditForm.EditFormColumnCount = 2;
             gv_DanhSach.OptionsSelection.EnableAppearanceFocusedCell = false;
             gv_DanhSach.OptionsView.ShowGroupPanel = false;
+            // 
+            // ID
+            // 
+            ID.Caption = "ID";
+            ID.FieldName = "ID";
+            ID.Name = "ID";
+            ID.Visible = true;
+            ID.VisibleIndex = 0;
+            // 
+            // taiKhoan
+            // 
+            taiKhoan.Caption = "Tài khoản";
+            taiKhoan.FieldName = "taiKhoan";
+            taiKhoan.Name = "taiKhoan";
+            taiKhoan.Visible = true;
+            taiKhoan.VisibleIndex = 1;
+            // 
+            // matKhau
+            // 
+            matKhau.Caption = "Mật khẩu";
+            matKhau.FieldName = "matKhau";
+            matKhau.Name = "matKhau";
+            matKhau.Visible = true;
+            matKhau.VisibleIndex = 2;
+            // 
+            // hoTen
+            // 
+            hoTen.Caption = "Họ và tên";
+            hoTen.FieldName = "hoTen";
+            hoTen.Name = "hoTen";
+            hoTen.Visible = true;
+            hoTen.VisibleIndex = 3;
+            // 
+            // role
+            // 
+            role.Caption = "role";
+            role.FieldName = "role";
+            role.Name = "role";
+            role.Visible = true;
+            role.VisibleIndex = 4;
             // 
             // UC_TaiKhoan
             // 
@@ -173,10 +222,15 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Label label1;
         private DevExpress.Utils.Layout.StackPanel panel_button;
-        private DevExpress.XtraEditors.SimpleButton btnThemBN;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThemTK;
+        private DevExpress.XtraEditors.SimpleButton btnSuaTK;
+        private DevExpress.XtraEditors.SimpleButton btnXoaTK;
         private DevExpress.XtraGrid.GridControl gc_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_DanhSach;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn taiKhoan;
+        private DevExpress.XtraGrid.Columns.GridColumn matKhau;
+        private DevExpress.XtraGrid.Columns.GridColumn hoTen;
+        private DevExpress.XtraGrid.Columns.GridColumn role;
     }
 }

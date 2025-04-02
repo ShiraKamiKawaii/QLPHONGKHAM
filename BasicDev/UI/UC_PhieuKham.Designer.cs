@@ -260,6 +260,8 @@
             // 
             // radioNam
             // 
+            radioNam.Checked = true;
+            radioNam.Enabled = false;
             radioNam.Location = new System.Drawing.Point(2, 2);
             radioNam.Name = "radioNam";
             radioNam.Size = new System.Drawing.Size(152, 25);
@@ -288,6 +290,7 @@
             // layoutControlItem4
             // 
             layoutControlItem4.Control = radioNu;
+            layoutControlItem4.Enabled = false;
             layoutControlItem4.Location = new System.Drawing.Point(156, 0);
             layoutControlItem4.Name = "layoutControlItem4";
             layoutControlItem4.Size = new System.Drawing.Size(159, 35);
@@ -297,6 +300,7 @@
             // 
             tablePanel1.SetColumn(dateNgaySinh, 1);
             dateNgaySinh.CustomFormat = "dd/MM/yyyy";
+            dateNgaySinh.Enabled = false;
             dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             dateNgaySinh.Location = new System.Drawing.Point(105, 136);
             dateNgaySinh.Name = "dateNgaySinh";
@@ -308,6 +312,7 @@
             // 
             tablePanel1.SetColumn(txtNoiDung, 1);
             txtNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            txtNoiDung.Enabled = false;
             txtNoiDung.Location = new System.Drawing.Point(105, 363);
             txtNoiDung.Name = "txtNoiDung";
             tablePanel1.SetRow(txtNoiDung, 9);
@@ -318,6 +323,7 @@
             // txtChuanDoan
             // 
             tablePanel1.SetColumn(txtChuanDoan, 1);
+            txtChuanDoan.Enabled = false;
             txtChuanDoan.Location = new System.Drawing.Point(105, 331);
             txtChuanDoan.Name = "txtChuanDoan";
             tablePanel1.SetRow(txtChuanDoan, 8);
@@ -327,6 +333,7 @@
             // txtCCCD
             // 
             tablePanel1.SetColumn(txtCCCD, 1);
+            txtCCCD.Enabled = false;
             txtCCCD.Location = new System.Drawing.Point(105, 292);
             txtCCCD.Name = "txtCCCD";
             tablePanel1.SetRow(txtCCCD, 7);
@@ -336,6 +343,7 @@
             // txtDienThoai
             // 
             tablePanel1.SetColumn(txtDienThoai, 1);
+            txtDienThoai.Enabled = false;
             txtDienThoai.Location = new System.Drawing.Point(105, 253);
             txtDienThoai.Name = "txtDienThoai";
             tablePanel1.SetRow(txtDienThoai, 6);
@@ -345,6 +353,7 @@
             // txtDiaChi
             // 
             tablePanel1.SetColumn(txtDiaChi, 1);
+            txtDiaChi.Enabled = false;
             txtDiaChi.Location = new System.Drawing.Point(105, 214);
             txtDiaChi.Name = "txtDiaChi";
             tablePanel1.SetRow(txtDiaChi, 5);
@@ -354,6 +363,7 @@
             // txtHoTenBN
             // 
             tablePanel1.SetColumn(txtHoTenBN, 1);
+            txtHoTenBN.Enabled = false;
             txtHoTenBN.Location = new System.Drawing.Point(105, 97);
             txtHoTenBN.Name = "txtHoTenBN";
             tablePanel1.SetRow(txtHoTenBN, 2);
@@ -363,6 +373,7 @@
             // txtMaBN
             // 
             tablePanel1.SetColumn(txtMaBN, 1);
+            txtMaBN.Enabled = false;
             txtMaBN.Location = new System.Drawing.Point(105, 58);
             txtMaBN.Name = "txtMaBN";
             tablePanel1.SetRow(txtMaBN, 1);
@@ -372,6 +383,7 @@
             // txtMaPK
             // 
             tablePanel1.SetColumn(txtMaPK, 1);
+            txtMaPK.Enabled = false;
             txtMaPK.Location = new System.Drawing.Point(105, 19);
             txtMaPK.Name = "txtMaPK";
             tablePanel1.SetRow(txtMaPK, 0);

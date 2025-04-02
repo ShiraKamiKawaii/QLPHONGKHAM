@@ -15,21 +15,21 @@ namespace BusinessLayer
         }
         public BenhNhan getItem(string maBN)
         {
-            return db.BenhNhan.FirstOrDefault(x=>x.maBN==maBN);
+            return db.BenhNhan.FirstOrDefault(x => x.maBN == maBN);
         }
         public BenhNhan Add(BenhNhan bn)
         {
 
-                db.BenhNhan.Add(bn);
-                db.SaveChanges();
-                return bn;
+            db.BenhNhan.Add(bn);
+            db.SaveChanges();
+            return bn;
 
         }
         public BenhNhan Update(BenhNhan bn)
         {
             try
             {
-                var _bn = db.BenhNhan.FirstOrDefault(x=>x.maBN==bn.maBN);
+                var _bn = db.BenhNhan.FirstOrDefault(x => x.maBN == bn.maBN);
                 _bn.hoTenBN = bn.hoTenBN;
                 _bn.diaChi = bn.diaChi;
                 _bn.ngaySinh = bn.ngaySinh;
@@ -49,12 +49,12 @@ namespace BusinessLayer
             try
             {
                 var _bn = db.BenhNhan.FirstOrDefault(x => x.maBN == maBN);
-                var _pk = db.PhieuKhams.Where(x => x.maBN == maBN);
-                db.PhieuKhams.RemoveRange(_pk);
+                var _pk = db.PhieuKham.Where(x => x.maBN == maBN);
+                db.PhieuKham.RemoveRange(_pk);
                 db.BenhNhan.Remove(_bn);
                 db.SaveChanges();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw new Exception("Lỗi: " + e.Message);
             }
