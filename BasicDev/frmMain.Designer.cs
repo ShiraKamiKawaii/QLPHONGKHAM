@@ -61,7 +61,7 @@
             MenuBar.Location = new System.Drawing.Point(0, 31);
             MenuBar.Name = "MenuBar";
             MenuBar.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            MenuBar.Size = new System.Drawing.Size(250, 565);
+            MenuBar.Size = new System.Drawing.Size(245, 565);
             MenuBar.TabIndex = 1;
             MenuBar.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -83,6 +83,7 @@
             // 
             // menuTK
             // 
+            menuTK.AccessibleName = "menuTK";
             menuTK.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("menuTK.ImageOptions.SvgImage");
             menuTK.Name = "menuTK";
             menuTK.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -95,6 +96,7 @@
             menuDangXuat.Name = "menuDangXuat";
             menuDangXuat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             menuDangXuat.Text = "Đăng xuất";
+            menuDangXuat.Click += menuDangXuat_Click;
             // 
             // frm
             // 
@@ -110,9 +112,9 @@
             // mainContener
             // 
             mainContener.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainContener.Location = new System.Drawing.Point(250, 31);
+            mainContener.Location = new System.Drawing.Point(245, 31);
             mainContener.Name = "mainContener";
-            mainContener.Size = new System.Drawing.Size(977, 565);
+            mainContener.Size = new System.Drawing.Size(982, 565);
             mainContener.TabIndex = 3;
             // 
             // frmMain
@@ -131,6 +133,7 @@
             NavigationControl = MenuBar;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Phòng Khám Đông Y Long Chi";
+            Load += frmMain_Load;
             ((System.ComponentModel.ISupportInitialize)formManager).EndInit();
             ((System.ComponentModel.ISupportInitialize)MenuBar).EndInit();
             ((System.ComponentModel.ISupportInitialize)frm).EndInit();

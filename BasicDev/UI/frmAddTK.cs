@@ -64,6 +64,7 @@ namespace QLPHONGKHAM.UI
             txtTaiKhoan.Text = txtTaiKhoan.Text.Trim();
             txtMatKhau.Text = txtMatKhau.Text.Trim();
             txtHoTen.Text = txtHoTen.Text.Trim();
+            role.Text = role.Text.Trim();
         }
     }
 }

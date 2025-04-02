@@ -14,14 +14,15 @@ using System.Windows.Forms;
 namespace BasicDev {
     public partial class frmMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        public frmMain()
+        public frmMain(string userRole)
         {
             InitializeComponent();
+            this.UserRole = userRole;
         }
         UC_BenhNhan ucBenhNhan;
         UC_TaiKhoan ucTaiKhoan;
         UC_PhieuKham ucPhieuKham;
-
+        private string UserRole;
         private void MenuBN_Click(object sender, EventArgs e)
         {
             if (mainContener.Controls.Count > 0 && mainContener.Controls[0] is UC_BenhNhan ucBenhNhan)
@@ -68,6 +69,19 @@ namespace BasicDev {
                 ucPhieuKham.Dock = DockStyle.Fill;
                 ucPhieuKham.BringToFront();
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            UserRole = UserRole.Trim().ToLower();
+            if (UserRole != "admin")
+            {
+                menuTK.Visible = false;
+            }
+        }
+        private void menuDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

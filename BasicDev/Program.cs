@@ -16,13 +16,18 @@ namespace BasicDev {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            using(frmLogin frmLogin = new frmLogin())
+            while (true)
             {
-               if(frmLogin.ShowDialog() == DialogResult.OK)
-               {
-                    Application.Run(new frmMain());
-               }      
-            };
+                using (frmLogin frmLogin = new frmLogin())
+                {
+                    if (frmLogin.ShowDialog() != DialogResult.OK)
+                        return;
+                    frmMain mainForm = new frmMain(frmLogin.UserRole);
+                        Application.Run(mainForm);
+                          
+                };
+            }
+            
         }
     }
 }

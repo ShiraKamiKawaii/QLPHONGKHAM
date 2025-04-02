@@ -56,10 +56,10 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + e.Message);
             }
         }
-        public bool CheckLogin(TaiKhoan tk)
+        public  TaiKhoan CheckLogin (TaiKhoan tk)
         {
             var _tk = db.TaiKhoan.FirstOrDefault(x => x.taiKhoan == tk.taiKhoan && x.matKhau == tk.matKhau);
-            return _tk != null;
+            return _tk;
         }
     }
 }
