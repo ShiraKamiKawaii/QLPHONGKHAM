@@ -42,6 +42,7 @@
             role = new DevExpress.XtraEditors.TextEdit();
             Root = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            role = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tablePanel1).BeginInit();
@@ -52,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)role.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)role.Properties).BeginInit();
             SuspendLayout();
             // 
             // layoutControl1
@@ -215,6 +217,13 @@
             layoutControlItem1.Size = new System.Drawing.Size(379, 248);
             layoutControlItem1.TextVisible = false;
             // 
+            // role
+            // 
+            role.Location = new System.Drawing.Point(92, 136);
+            role.Name = "role";
+            role.Size = new System.Drawing.Size(270, 20);
+            role.TabIndex = 7;
+            // 
             // frmAddTK
             // 
             AcceptButton = btnSaveTK;
@@ -239,6 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)role.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)Root).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)role.Properties).EndInit();
             ResumeLayout(false);
         }
 
